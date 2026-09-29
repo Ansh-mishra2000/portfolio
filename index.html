@@ -3,20 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ansh Mishra | DevOps & Site Reliability Engineer (SRE)</title>
-  <meta name="description" content="Professional Portfolio of Ansh Mishra — DevOps Engineer, Site Reliability Engineer (SRE), and Cloud Infrastructure Specialist specializing in AWS, Kubernetes, Terraform, CI/CD, and Observability." />
-  <meta name="keywords" content="Ansh Mishra, DevOps Engineer, Site Reliability Engineer, SRE, Cloud Engineer, AWS, Kubernetes, Terraform, Docker, CI/CD, Astrotanttra" />
-  <meta name="author" content="Ansh Mishra" />
-
-  <!-- Open Graph / Meta -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Ansh Mishra | DevOps & Site Reliability Engineer" />
-  <meta property="og:description" content="DevOps & Site Reliability Engineer with 2+ years of enterprise cloud experience in AWS, Kubernetes, Terraform, and Observability." />
+  <title>Ansh Mishra — DevOps & Site Reliability Engineer</title>
+  <meta name="description" content="Portfolio of Ansh Mishra — DevOps, SRE, and Cloud Infrastructure Engineer specializing in AWS, Kubernetes, Terraform, and high-reliability systems." />
   
-  <!-- Google Fonts: Inter -->
+  <!-- Fonts: Newsreader (Claude's signature literary serif), Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -24,16 +17,22 @@
   <!-- Toast Notification -->
   <div id="toast" class="toast" role="alert" aria-live="polite"></div>
 
-  <!-- Navigation -->
+  <!-- Top Navigation (Claude Style) -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-brand">
-        <span class="brand-code">&lt;</span><span class="brand-name">Ansh Mishra</span><span class="brand-code">/&gt;</span>
+        <!-- Claude Sunburst / Spark Icon in Terracotta -->
+        <svg class="claude-spark" viewBox="0 0 24 24" width="22" height="22" fill="none">
+          <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z" fill="var(--claude-terracotta)" />
+          <path d="M18.5 15.5L19.5 18.5L22.5 19.5L19.5 20.5L18.5 23.5L17.5 20.5L14.5 19.5L17.5 18.5L18.5 15.5Z" fill="var(--claude-terracotta)" opacity="0.75" />
+          <path d="M5.5 15.5L6.5 18.5L9.5 19.5L6.5 20.5L5.5 23.5L4.5 20.5L1.5 19.5L4.5 18.5L5.5 15.5Z" fill="var(--claude-terracotta)" opacity="0.75" />
+        </svg>
+        <span class="brand-text">Ansh Mishra</span>
       </a>
 
       <nav class="nav-menu" id="navMenu">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#about" class="nav-link">Overview</a>
+        <a href="#projects" class="nav-link">Artifacts &amp; Projects</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#education" class="nav-link">Education</a>
@@ -41,26 +40,26 @@
       </nav>
 
       <div class="nav-actions">
-        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
-          <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="claude-icon-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
             <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
             <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="1" y1="12" x2="23" y2="12"></line>
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
 
-        <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+        <a href="#contact" class="btn btn-terracotta">Get in Touch</a>
 
-        <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Open navigation menu">
+        <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Toggle navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -69,208 +68,328 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
+  <!-- Hero Section (Claude Chat / Greeting Style) -->
+  <section class="hero-section" id="hero">
     <div class="container hero-container">
-      <div class="hero-content">
-        <div class="badge-pill">
-          <span class="status-dot"></span>
-          <span>Available for New Roles & Consulting</span>
+      <div class="claude-greeting-card">
+        <div class="greeting-avatar-row">
+          <div class="avatar-frame">
+            <img src="assets/profile.jpg" alt="Ansh Mishra" class="avatar-photo" />
+            <div class="availability-indicator" title="Available for opportunities"></div>
+          </div>
+          <div class="greeting-badge">
+            <span class="sparkle">✦</span>
+            <span>Cloud &amp; Site Reliability Engineer</span>
+          </div>
         </div>
 
-        <h1 class="hero-title">
-          Hi, I'm <span class="gradient-text">Ansh Mishra</span>
+        <h1 class="claude-headline">
+          Hello, I'm <span class="serif-accent">Ansh Mishra</span>.
         </h1>
-        <h2 class="hero-subtitle">
-          DevOps Engineer &amp; Site Reliability Engineer (SRE)
-        </h2>
-
-        <p class="hero-description">
-          Results-driven Cloud &amp; Infrastructure Engineer with <strong>2+ years of enterprise IT experience</strong>. 
-          Specializing in architecting reliable cloud systems on <strong>AWS</strong>, orchestrating <strong>Kubernetes</strong> workloads, 
-          automating infrastructure with <strong>Terraform</strong>, and building resilient <strong>CI/CD &amp; Observability</strong> pipelines.
+        
+        <p class="claude-subhead">
+          DevOps &amp; SRE specialist with <strong>2+ years of enterprise IT experience</strong>. I architect reliable 
+          cloud infrastructure on <strong>AWS</strong>, automate Kubernetes clusters, author modular <strong>Terraform (IaC)</strong>, 
+          and engineer resilient web platforms including full client deployments like <strong>Astrotanttra</strong>.
         </p>
 
-        <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 17 12 22 22 17"></polyline>
-              <polyline points="2 12 12 17 22 12"></polyline>
-            </svg>
-            Explore Projects
-          </a>
-          <a href="#contact" class="btn btn-outline">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            Get In Touch
-          </a>
+        <!-- Claude Prompt Box / Interactive Query Bar -->
+        <div class="claude-prompt-box">
+          <div class="prompt-input-wrapper">
+            <div class="prompt-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <input 
+              type="text" 
+              id="promptInput" 
+              class="prompt-input" 
+              placeholder="Ask anything or click a suggestion below..." 
+              autocomplete="off"
+            />
+            <button id="promptSubmit" class="prompt-send-btn" aria-label="Send prompt">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Prompt Suggestions (Claude Style Chips) -->
+          <div class="prompt-suggestions">
+            <button class="suggestion-chip" data-target="project-astrotanttra">
+              <span class="chip-spark">✦</span> Client Project: Astrotanttra
+            </button>
+            <button class="suggestion-chip" data-target="project-cost-optimizer">
+              <span class="chip-spark">✦</span> EKS Cost Optimizer
+            </button>
+            <button class="suggestion-chip" data-target="experience">
+              <span class="chip-spark">✦</span> Enterprise Experience
+            </button>
+            <button class="suggestion-chip" data-target="skills">
+              <span class="chip-spark">✦</span> Tech Stack &amp; Skills
+            </button>
+            <button class="suggestion-chip" data-target="contact">
+              <span class="chip-spark">✦</span> Contact Ansh
+            </button>
+          </div>
         </div>
 
-        <div class="quick-contact-strip">
-          <div class="quick-item">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            <span>Noida, India</span>
+        <div class="quick-meta-row">
+          <div class="meta-item">
+            <span class="meta-label">Location</span>
+            <span class="meta-val">Noida, India</span>
           </div>
-          <div class="quick-item">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-            <a href="tel:+918299057337">+91 8299057337</a>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-label">Email</span>
+            <a href="mailto:anshm8888@gmail.com" class="meta-val link">anshm8888@gmail.com</a>
           </div>
-          <div class="quick-item">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            <a href="mailto:anshm8888@gmail.com">anshm8888@gmail.com</a>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-label">Phone</span>
+            <a href="tel:+918299057337" class="meta-val link">+91 8299057337</a>
           </div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="profile-card">
-          <div class="image-wrapper">
-            <img src="assets/profile.jpg" alt="Ansh Mishra - DevOps & SRE Engineer" class="profile-img" />
-          </div>
-          <div class="profile-details">
-            <div class="profile-name">Ansh Mishra</div>
-            <div class="profile-role">Cloud &amp; DevOps Specialist</div>
-            <div class="profile-socials">
-              <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub Profile">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                </svg>
-              </a>
-              <a href="https://linkedin.com/in/ansh-mishra-286986157" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn Profile">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-              </a>
-              <a href="mailto:anshm8888@gmail.com" class="social-icon" title="Send Email">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="profile-stats">
-            <div class="stat-box">
-              <span class="stat-number">2+</span>
-              <span class="stat-label">Years Exp</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-box">
-              <span class="stat-number">99.9%</span>
-              <span class="stat-label">Uptime Goal</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-box">
-              <span class="stat-number">AWS</span>
-              <span class="stat-label">EKS &amp; IaC</span>
-            </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-label">Uptime Goal</span>
+            <span class="meta-val highlight">99.9% SRE</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="section about-section" id="about">
+  <!-- Overview / Summary Section -->
+  <section class="section" id="about">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Summary</span>
-        <h2 class="section-title">About Me</h2>
-        <div class="section-line"></div>
+      <div class="section-label">
+        <span class="label-spark">✦</span> Overview
       </div>
+      <h2 class="section-heading">Engineering Philosophy &amp; Core Strengths</h2>
+      <p class="section-desc">Transforming manual infrastructure operations into automated, version-controlled code.</p>
 
-      <div class="about-grid">
-        <div class="about-card highlight-box">
-          <h3>Architecting Scalable, Automated &amp; Resilient Cloud Infrastructure</h3>
+      <div class="claude-cards-grid">
+        <div class="claude-card">
+          <div class="card-icon-header">
+            <div class="terracotta-badge">01</div>
+            <h3>Cloud Infrastructure as Code</h3>
+          </div>
           <p>
-            I am a <strong>DevOps Engineer</strong>, <strong>Site Reliability Engineer (SRE)</strong>, and <strong>Cloud Infrastructure Specialist</strong> 
-            passionate about turning complex manual operations into elegant, automated code. My core expertise centers on 
-            <strong>AWS</strong> (EKS, EC2, VPC, RDS, IAM, S3), <strong>Kubernetes orchestration</strong>, 
-            <strong>Terraform Infrastructure-as-Code</strong>, and <strong>GitOps CI/CD workflows</strong>.
+            Architecting isolated development and production environments on AWS using modular, reusable <strong>Terraform</strong> scripts. 
+            Deep experience with VPC networking, Amazon EKS, RDS PostgreSQL, and S3 object storage.
           </p>
+        </div>
+
+        <div class="claude-card">
+          <div class="card-icon-header">
+            <div class="terracotta-badge">02</div>
+            <h3>Kubernetes &amp; Orchestration</h3>
+          </div>
           <p>
-            With a solid foundation in software development and full-stack architecture, I bridge the gap between engineering teams 
-            and operational excellence — ensuring systems are secure, auto-scaling, highly available, and observable 24/7.
+            Provisioning containerized workloads with Docker, Helm charts, Horizontal Pod Autoscalers (HPA), and NGINX Ingress. 
+            Secured pod-level communication via <strong>IAM Roles for Service Accounts (IRSA)</strong> and Kubernetes RBAC.
           </p>
+        </div>
 
-          <div class="key-metrics-grid">
-            <div class="metric-card">
-              <div class="metric-value">20–35%</div>
-              <div class="metric-desc">Cloud Infrastructure Cost Reduction via intelligent pod right-sizing</div>
+        <div class="claude-card">
+          <div class="card-icon-header">
+            <div class="terracotta-badge">03</div>
+            <h3>Observability &amp; Reliability</h3>
+          </div>
+          <p>
+            Implementing end-to-end monitoring stacks using <strong>Prometheus, Grafana, and Alertmanager</strong>. 
+            Deploying node exporters, metric scrapers, and alerting rules to maintain 99.9% service and database availability.
+          </p>
+        </div>
+
+        <div class="claude-card">
+          <div class="card-icon-header">
+            <div class="terracotta-badge">04</div>
+            <h3>Full-Stack &amp; Client Solutions</h3>
+          </div>
+          <p>
+            Delivering complete digital solutions for clients (such as <strong>Astrotanttra</strong>) with modern frontend user interfaces, 
+            resilient backend APIs in Python (FastAPI) and Node.js, and high-performance cloud hosting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (Claude Artifact Style) -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-spark">✦</span> Artifacts &amp; Work
+      </div>
+      <h2 class="section-heading">Featured Projects &amp; Deployments</h2>
+      <p class="section-desc">Production-grade infrastructure designs, client web platforms, and automated cloud workflows.</p>
+
+      <!-- Category Filter Tabs (Claude Style) -->
+      <div class="claude-tabs">
+        <button class="tab-btn active" data-tab="all">All Artifacts</button>
+        <button class="tab-btn" data-tab="client">Client Work</button>
+        <button class="tab-tab-btn" data-tab="cloud">Cloud &amp; DevOps</button>
+        <button class="tab-btn" data-tab="microservices">Microservices &amp; GitOps</button>
+      </div>
+
+      <div class="artifacts-container">
+        <!-- Artifact 1: Astrotanttra (Client Project) -->
+        <div class="artifact-card" id="project-astrotanttra" data-category="client">
+          <div class="artifact-header">
+            <div class="artifact-title-box">
+              <span class="artifact-icon">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8" fill="none" stroke="currentColor" stroke-width="2"></polyline>
+                </svg>
+              </span>
+              <span class="artifact-type">Client Artifact — Production Web Platform</span>
+              <span class="artifact-status-pill featured">★ Client Verified</span>
             </div>
-            <div class="metric-card">
-              <div class="metric-value">5+ Hours</div>
-              <div class="metric-desc">Weekly manual operational toil eliminated through Python &amp; Bash automation</div>
+            <div class="artifact-actions">
+              <span class="artifact-date">Delivered for Client</span>
             </div>
-            <div class="metric-card">
-              <div class="metric-value">Zero-Downtime</div>
-              <div class="metric-desc">Automated CI/CD deployments to Amazon EKS clusters</div>
+          </div>
+
+          <div class="artifact-body">
+            <h3 class="artifact-name">Astrotanttra — Astrology &amp; Spiritual Guidance Platform</h3>
+            <p class="artifact-lead">
+              End-to-end web platform engineered for client <strong>Astrotanttra</strong>. Designed to offer seamless service discovery, 
+              interactive consultation inquiry workflows, responsive UI/UX, and cloud-backed reliability.
+            </p>
+
+            <div class="artifact-specs">
+              <div class="spec-block">
+                <h4>Client Deliverables &amp; Features</h4>
+                <ul class="spec-list">
+                  <li><strong>Modern Responsive Interface:</strong> Developed a fluid, mobile-first design ensuring fast loading and intuitive navigation across mobile, tablet, and desktop devices.</li>
+                  <li><strong>Consultation &amp; Inquiry Workflows:</strong> Created structured booking and consultation request forms with immediate client lead capture.</li>
+                  <li><strong>SEO &amp; Performance Tuning:</strong> Optimized asset bundling, meta tags, and SSL certificate security for client discovery and search ranking.</li>
+                  <li><strong>Reliable Cloud Hosting:</strong> Configured high-availability static web hosting with zero downtime.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="artifact-tag-strip">
+              <span class="artifact-tag">Client Project</span>
+              <span class="artifact-tag">Astrotanttra</span>
+              <span class="artifact-tag">React.js / Web</span>
+              <span class="artifact-tag">UI/UX Design</span>
+              <span class="artifact-tag">Responsive</span>
+              <span class="artifact-tag">Cloud Infrastructure</span>
+              <span class="artifact-tag">SEO &amp; SSL</span>
+            </div>
+
+            <div class="artifact-footer">
+              <div class="client-quote">
+                <em>"Delivered customized digital presence catering to high-engagement spiritual consulting inquiries."</em>
+              </div>
+              <a href="#contact" class="btn btn-sm btn-outline">Request Client Project</a>
             </div>
           </div>
         </div>
 
-        <div class="about-highlights">
-          <div class="feature-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                <line x1="6" y1="18" x2="6.01" y2="18"></line>
-              </svg>
+        <!-- Artifact 2: Cloud-Native Kubernetes Cost Optimizer -->
+        <div class="artifact-card" id="project-cost-optimizer" data-category="cloud">
+          <div class="artifact-header">
+            <div class="artifact-title-box">
+              <span class="artifact-icon">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8" fill="none" stroke="currentColor" stroke-width="2"></polyline>
+                </svg>
+              </span>
+              <span class="artifact-type">Technical Artifact — FinOps &amp; Infrastructure</span>
+              <span class="artifact-status-pill">20–35% Savings</span>
             </div>
-            <div>
-              <h4>Cloud &amp; Infrastructure as Code</h4>
-              <p>Modular, reusable Terraform modules for multi-environment (Dev/Prod) VPCs, EKS clusters, and RDS databases.</p>
-            </div>
-          </div>
-
-          <div class="feature-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              </svg>
-            </div>
-            <div>
-              <h4>Enterprise Security &amp; IRSA</h4>
-              <p>Least-privilege IAM policies, IAM Roles for Service Accounts (IRSA), and Kubernetes RBAC eliminating static secrets.</p>
+            <div class="artifact-actions">
+              <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="artifact-link">
+                View GitHub
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
             </div>
           </div>
 
-          <div class="feature-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="18" y1="20" x2="18" y2="10"></line>
-                <line x1="12" y1="20" x2="12" y2="4"></line>
-                <line x1="6" y1="20" x2="6" y2="14"></line>
-              </svg>
+          <div class="artifact-body">
+            <h3 class="artifact-name">Cloud-Native Kubernetes Cost Optimizer for Amazon EKS</h3>
+            <p class="artifact-lead">
+              Automated AWS infrastructure with decoupled Prometheus API metric collectors and a FastAPI analytics engine to optimize pod right-sizing and curb cloud expenditure.
+            </p>
+
+            <div class="artifact-specs">
+              <div class="spec-block">
+                <h4>Architecture Highlights</h4>
+                <ul class="spec-list">
+                  <li><strong>Modular Terraform (IaC):</strong> Architected isolated dev and prod AWS environments using reusable modules for VPC networking, EKS clusters, RDS PostgreSQL, and ECR.</li>
+                  <li><strong>Security &amp; IRSA:</strong> Configured IAM Roles for Service Accounts (IRSA) and Kubernetes RBAC for fine-grained pod-level access, eliminating static credentials.</li>
+                  <li><strong>AWS CCM Integration:</strong> Integrated AWS Cloud Controller Manager to automate node lifecycle synchronization and cloud load balancer provisioning.</li>
+                  <li><strong>AI-Assisted Cost Optimization:</strong> Built a FastAPI analytics service integrating AWS Pricing APIs and Boto3 to deliver right-sizing recommendations.</li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <h4>Observability &amp; Reliability</h4>
-              <p>Prometheus, Grafana, Alertmanager, custom metric scrapers, and automated alerting to maintain 99.9% uptime.</p>
+
+            <div class="artifact-tag-strip">
+              <span class="artifact-tag">AWS EKS</span>
+              <span class="artifact-tag">Terraform</span>
+              <span class="artifact-tag">Kubernetes</span>
+              <span class="artifact-tag">Python (FastAPI)</span>
+              <span class="artifact-tag">Prometheus</span>
+              <span class="artifact-tag">Boto3</span>
+              <span class="artifact-tag">Docker</span>
+              <span class="artifact-tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artifact 3: NutriFlow AI -->
+        <div class="artifact-card" id="project-nutriflow" data-category="microservices">
+          <div class="artifact-header">
+            <div class="artifact-title-box">
+              <span class="artifact-icon">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8" fill="none" stroke="currentColor" stroke-width="2"></polyline>
+                </svg>
+              </span>
+              <span class="artifact-type">Technical Artifact — CI/CD &amp; GitOps</span>
+              <span class="artifact-status-pill">Zero Downtime</span>
+            </div>
+            <div class="artifact-actions">
+              <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="artifact-link">
+                View GitHub
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
             </div>
           </div>
 
-          <div class="feature-item">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
+          <div class="artifact-body">
+            <h3 class="artifact-name">NutriFlow AI: Microservices Platform &amp; CI/CD Engine</h3>
+            <p class="artifact-lead">
+              Containerized microservices platform with automated GitHub Actions CI/CD workflows, Horizontal Pod Autoscaling (HPA), and real-time observability.
+            </p>
+
+            <div class="artifact-specs">
+              <div class="spec-block">
+                <h4>Pipeline &amp; Scaling Specifications</h4>
+                <ul class="spec-list">
+                  <li><strong>End-to-End CI/CD:</strong> GitHub Actions pipeline automating pytest suites, flake8 linting, multi-stage Docker builds to Amazon ECR, and zero-downtime rolling EKS deployments.</li>
+                  <li><strong>Kubernetes Auto-Scaling:</strong> Horizontal Pod Autoscalers (2–10 replicas) triggered dynamically at 70% CPU and 80% memory thresholds with NGINX Ingress routing.</li>
+                  <li><strong>AI Engine &amp; Monitoring:</strong> Asynchronous FastAPI microservices integrating Google Gemini GenAI with Prometheus metrics scrapers and Grafana dashboards for latency tracking.</li>
+                </ul>
+              </div>
             </div>
-            <div>
-              <h4>Client Web &amp; Product Solutions</h4>
-              <p>Proven track record delivering client websites and platforms (like Astrotanttra) with modern design and resilient hosting.</p>
+
+            <div class="artifact-tag-strip">
+              <span class="artifact-tag">AWS EKS</span>
+              <span class="artifact-tag">GitHub Actions</span>
+              <span class="artifact-tag">Kubernetes (HPA)</span>
+              <span class="artifact-tag">Terraform</span>
+              <span class="artifact-tag">Docker</span>
+              <span class="artifact-tag">Grafana</span>
+              <span class="artifact-tag">Google Gemini</span>
             </div>
           </div>
         </div>
@@ -278,235 +397,63 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="section projects-section" id="projects">
+  <!-- Professional Experience (Claude Turn / Timeline Style, strictly anonymized) -->
+  <section class="section" id="experience">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Portfolio</span>
-        <h2 class="section-title">Featured Projects &amp; Client Work</h2>
-        <p class="section-subtitle">Real-world production engineering, client platforms, and cloud infrastructure architectures.</p>
-        <div class="section-line"></div>
+      <div class="section-label">
+        <span class="label-spark">✦</span> Career History
       </div>
+      <h2 class="section-heading">Professional Experience</h2>
+      <p class="section-desc">2+ years delivering enterprise cloud infrastructure, site reliability, and software solutions.</p>
 
-      <!-- Project Filters -->
-      <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="client">Client Work</button>
-        <button class="filter-btn" data-filter="cloud">Cloud &amp; DevOps</button>
-        <button class="filter-btn" data-filter="microservices">Microservices &amp; AI</button>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Project 1: Astrotanttra (Client Project) -->
-        <article class="project-card client-project-card" data-category="client">
-          <div class="project-banner">
-            <span class="badge-featured">⭐ Featured Client Project</span>
-            <span class="project-type">Production Web Platform</span>
+      <div class="claude-timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-block">
+          <div class="timeline-meta-col">
+            <span class="time-period">Jun 2024 – Present</span>
+            <span class="role-domain">Enterprise Infrastructure &amp; Cloud</span>
           </div>
-
-          <div class="project-body">
-            <div class="project-header">
-              <h3 class="project-name">Astrotanttra — Client Astrology &amp; Guidance Platform</h3>
-            </div>
-            
-            <p class="project-summary">
-              Engineered and delivered a modern, responsive digital platform for <strong>Astrotanttra</strong>. Designed to offer intuitive service discovery, spiritual consulting session inquiries, interactive user touchpoints, and ultra-fast performance on all devices.
-            </p>
-
-            <div class="project-highlights">
-              <div class="highlight-point">
-                <strong>Responsive UI/UX Architecture:</strong> Built a clean, mobile-first web interface tailored for seamless client exploration and rapid interaction.
-              </div>
-              <div class="highlight-point">
-                <strong>Client Consultation Workflow:</strong> Structured lead capture, consultation inquiry forms, and organized service catalogs.
-              </div>
-              <div class="highlight-point">
-                <strong>Performance &amp; Cloud Reliability:</strong> Optimized asset loading, SEO metadata, SSL encryption, and high-availability static web hosting.
-              </div>
-            </div>
-
-            <div class="tech-tags">
-              <span class="tech-tag">Client Project</span>
-              <span class="tech-tag">React / Web</span>
-              <span class="tech-tag">UI/UX Design</span>
-              <span class="tech-tag">Responsive</span>
-              <span class="tech-tag">SEO &amp; Performance</span>
-              <span class="tech-tag">Cloud Hosting</span>
-            </div>
-
-            <div class="project-footer">
-              <span class="status-indicator live">Delivered for Client</span>
-              <a href="#contact" class="btn btn-sm btn-outline">Request Similar Project</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 2: Cloud-Native Kubernetes Cost Optimizer -->
-        <article class="project-card" data-category="cloud">
-          <div class="project-banner">
-            <span class="badge-tech">AWS &amp; Kubernetes</span>
-            <span class="project-type">Infrastructure &amp; FinOps</span>
-          </div>
-
-          <div class="project-body">
-            <div class="project-header">
-              <h3 class="project-name">Cloud-Native Kubernetes Cost Optimizer for Amazon EKS</h3>
-            </div>
-            
-            <p class="project-summary">
-              Architected isolated dev and prod AWS infrastructure with automated Kubernetes CronJob collectors and a FastAPI analytics engine to right-size workloads and reduce cloud costs by 20–35%.
-            </p>
-
-            <div class="project-highlights">
-              <div class="highlight-point">
-                <strong>Modular Terraform:</strong> Reusable IaC modules for VPC networking, Amazon EKS clusters, RDS PostgreSQL, and ECR registries.
-              </div>
-              <div class="highlight-point">
-                <strong>Enterprise Security (IRSA):</strong> Configured IAM Roles for Service Accounts and K8s RBAC for pod-level AWS credential-free access.
-              </div>
-              <div class="highlight-point">
-                <strong>AWS CCM &amp; Prometheus:</strong> AWS Cloud Controller Manager node synchronization and decoupled CronJob metrics collectors querying Prometheus APIs.
-              </div>
-              <div class="highlight-point">
-                <strong>Cost Analytics Engine:</strong> FastAPI service utilizing AWS Pricing APIs, Boto3, and utilization models to generate right-sizing recommendations.
-              </div>
-            </div>
-
-            <div class="tech-tags">
-              <span class="tech-tag">AWS EKS</span>
-              <span class="tech-tag">Terraform</span>
-              <span class="tech-tag">Kubernetes</span>
-              <span class="tech-tag">Python (FastAPI)</span>
-              <span class="tech-tag">Boto3</span>
-              <span class="tech-tag">Prometheus</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">PostgreSQL</span>
-            </div>
-
-            <div class="project-footer">
-              <span class="status-indicator">Architecture &amp; IaC</span>
-              <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="link-arrow">
-                View on GitHub
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 3: NutriFlow AI Microservices Platform -->
-        <article class="project-card" data-category="microservices">
-          <div class="project-banner">
-            <span class="badge-tech">Microservices &amp; GitOps</span>
-            <span class="project-type">Full CI/CD Pipeline</span>
-          </div>
-
-          <div class="project-body">
-            <div class="project-header">
-              <h3 class="project-name">NutriFlow AI: Cloud-Native Microservices Platform &amp; CI/CD Engine</h3>
-            </div>
-            
-            <p class="project-summary">
-              End-to-end containerized microservices application featuring automated GitHub Actions CI/CD, multi-stage Docker builds, Kubernetes Horizontal Pod Autoscaling (HPA), and live Prometheus/Grafana monitoring.
-            </p>
-
-            <div class="project-highlights">
-              <div class="highlight-point">
-                <strong>Automated CI/CD &amp; GitOps:</strong> Automated pytest validation, flake8 linting, multi-stage Docker builds to Amazon ECR, and zero-downtime rolling EKS deployments.
-              </div>
-              <div class="highlight-point">
-                <strong>Infrastructure &amp; Auto-Scaling:</strong> Terraform-provisioned VPC &amp; EKS, NGINX Ingress, and HPA (2–10 replicas) scaling dynamically on CPU/memory thresholds.
-              </div>
-              <div class="highlight-point">
-                <strong>Microservices &amp; Observability:</strong> Asynchronous FastAPI services integrated with Google Gemini GenAI, with Prometheus metric scrapers and Grafana dashboards for latency and cluster health.
-              </div>
-            </div>
-
-            <div class="tech-tags">
-              <span class="tech-tag">AWS EKS</span>
-              <span class="tech-tag">GitHub Actions</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">Kubernetes (HPA)</span>
-              <span class="tech-tag">Terraform</span>
-              <span class="tech-tag">Grafana</span>
-              <span class="tech-tag">Google Gemini</span>
-            </div>
-
-            <div class="project-footer">
-              <span class="status-indicator">GitOps &amp; Scaling</span>
-              <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="link-arrow">
-                View on GitHub
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Professional Experience (Anonymized per instructions) -->
-  <section class="section experience-section" id="experience">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Career</span>
-        <h2 class="section-title">Professional Experience</h2>
-        <p class="section-subtitle">2+ years of enterprise IT, infrastructure engineering, and full-stack software delivery.</p>
-        <div class="section-line"></div>
-      </div>
-
-      <div class="timeline">
-        <!-- Experience Item 1 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <div>
-                <h3 class="role-title">IT Executive — Cloud &amp; Systems Infrastructure</h3>
-                <div class="role-meta">Enterprise Infrastructure &amp; Cloud Operations</div>
-              </div>
-              <span class="timeline-date">Jun 2024 – Present</span>
-            </div>
-            <ul class="timeline-points">
-              <li>Provision and manage <strong>AWS EC2, S3, and VPC</strong> network infrastructure; maintain standard configurations using <strong>Terraform</strong> to ensure consistent and reproducible environments.</li>
+          <div class="timeline-card">
+            <h3 class="role-heading">IT Executive — Cloud &amp; Systems Infrastructure</h3>
+            <ul class="role-bullets">
+              <li>Provision and manage <strong>AWS EC2, S3, and VPC</strong> network infrastructure; maintain standard configurations using <strong>Terraform</strong> scripts to ensure consistent environments across staging and production.</li>
               <li>Build and run containerized internal tools using <strong>Docker</strong>, crafting multi-stage Dockerfiles and automating container health checks to streamline deployment cycles.</li>
               <li>Assist the infrastructure team in testing <strong>Kubernetes (K8s)</strong> deployment manifests, monitoring pod replica status, and debugging pods via <code>kubectl logs</code> and <code>kubectl describe</code>.</li>
               <li>Deploy and maintain <strong>Prometheus node exporters and Grafana dashboards</strong> to continuously monitor server health, CPU/memory consumption, and database availability targeting <strong>99.9% uptime</strong>.</li>
               <li>Develop <strong>Bash and Python automation scripts</strong> for routine automated database backups to AWS S3 and log rotation, cutting manual operational effort by <strong>5+ hours weekly</strong>.</li>
             </ul>
-            <div class="timeline-tags">
-              <span>AWS (EC2, S3, VPC)</span>
+            <div class="role-tags">
+              <span>AWS</span>
               <span>Terraform</span>
               <span>Docker</span>
               <span>Kubernetes</span>
-              <span>Prometheus &amp; Grafana</span>
-              <span>Python &amp; Bash</span>
+              <span>Prometheus</span>
+              <span>Grafana</span>
+              <span>Bash &amp; Python</span>
             </div>
           </div>
         </div>
 
-        <!-- Experience Item 2 -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <div>
-                <h3 class="role-title">Full Stack Development Engineer</h3>
-                <div class="role-meta">Enterprise Software Development</div>
-              </div>
-              <span class="timeline-date">Feb 2024 – May 2024</span>
-            </div>
-            <ul class="timeline-points">
-              <li>Developed responsive UI components using <strong>React.js</strong> and <strong>Angular</strong> in an enterprise Agile/Scrum environment; managed versioning and collaboration via <strong>Git / GitHub</strong>.</li>
+        <!-- Experience 2 -->
+        <div class="timeline-block">
+          <div class="timeline-meta-col">
+            <span class="time-period">Feb 2024 – May 2024</span>
+            <span class="role-domain">Enterprise Software Systems</span>
+          </div>
+          <div class="timeline-card">
+            <h3 class="role-heading">Full Stack Development Engineer</h3>
+            <ul class="role-bullets">
+              <li>Developed responsive UI components using <strong>React.js and Angular</strong> in an enterprise Agile/Scrum environment; managed versioning and team collaboration via <strong>Git / GitHub</strong>.</li>
               <li>Engineered scalable <strong>RESTful backend services</strong> using <strong>Node.js and Python</strong>; designed and indexed SQL schemas for optimized database query performance.</li>
               <li>Participated actively in sprint planning, Git branch workflows, peer code reviews, and automated <strong>CI/CD deployment pipelines</strong>.</li>
             </ul>
-            <div class="timeline-tags">
+            <div class="role-tags">
               <span>React.js</span>
               <span>Node.js</span>
               <span>Python</span>
               <span>REST APIs</span>
               <span>SQL</span>
-              <span>Git &amp; CI/CD</span>
+              <span>CI/CD</span>
             </div>
           </div>
         </div>
@@ -514,152 +461,107 @@
     </div>
   </section>
 
-  <!-- Technical Skills Section -->
-  <section class="section skills-section" id="skills">
+  <!-- Technical Competencies (Claude Matrix Style) -->
+  <section class="section" id="skills">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Competencies</span>
-        <h2 class="section-title">Technical Skills &amp; Stack</h2>
-        <p class="section-subtitle">Core technologies, tools, and methodologies leveraged across cloud and software engineering.</p>
-        <div class="section-line"></div>
+      <div class="section-label">
+        <span class="label-spark">✦</span> Technical Matrix
       </div>
+      <h2 class="section-heading">Skills &amp; Capabilities</h2>
+      <p class="section-desc">Tools and frameworks applied across cloud engineering, reliability, and full-stack development.</p>
 
-      <div class="skills-grid">
-        <!-- Skill Card 1: Cloud -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="cat-icon">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-              </svg>
-            </div>
-            <h3>Cloud Computing (AWS)</h3>
+      <div class="skills-claude-matrix">
+        <div class="skill-category">
+          <div class="category-header">
+            <h4>Cloud Computing (AWS)</h4>
           </div>
-          <div class="skill-badges">
-            <span class="skill-badge">Amazon EKS</span>
-            <span class="skill-badge">AWS EC2</span>
-            <span class="skill-badge">AWS VPC</span>
-            <span class="skill-badge">RDS (PostgreSQL)</span>
-            <span class="skill-badge">Amazon S3</span>
-            <span class="skill-badge">AWS IAM</span>
-            <span class="skill-badge">Amazon ECR</span>
-            <span class="skill-badge">DynamoDB</span>
-            <span class="skill-badge">Boto3</span>
-            <span class="skill-badge">AWS CCM</span>
+          <div class="category-tags">
+            <span class="pill">Amazon EKS</span>
+            <span class="pill">AWS EC2</span>
+            <span class="pill">AWS VPC</span>
+            <span class="pill">RDS (PostgreSQL)</span>
+            <span class="pill">Amazon S3</span>
+            <span class="pill">AWS IAM &amp; IRSA</span>
+            <span class="pill">Amazon ECR</span>
+            <span class="pill">DynamoDB</span>
+            <span class="pill">Boto3</span>
+            <span class="pill">AWS CCM</span>
           </div>
         </div>
 
-        <!-- Skill Card 2: Containers & Orchestration -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="cat-icon">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                <line x1="6" y1="18" x2="6.01" y2="18"></line>
-              </svg>
-            </div>
-            <h3>Containers &amp; Orchestration</h3>
+        <div class="skill-category">
+          <div class="category-header">
+            <h4>Containers &amp; Orchestration</h4>
           </div>
-          <div class="skill-badges">
-            <span class="skill-badge">Kubernetes (K8s)</span>
-            <span class="skill-badge">Docker</span>
-            <span class="skill-badge">Helm</span>
-            <span class="skill-badge">Kubernetes RBAC</span>
-            <span class="skill-badge">HPA Auto-scaling</span>
-            <span class="skill-badge">Ingress Controllers</span>
-            <span class="skill-badge">CronJobs</span>
-            <span class="skill-badge">Pod Disruption Budgets</span>
-            <span class="skill-badge">Minikube</span>
+          <div class="category-tags">
+            <span class="pill">Kubernetes (K8s)</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Helm</span>
+            <span class="pill">Kubernetes RBAC</span>
+            <span class="pill">HPA Autoscaling</span>
+            <span class="pill">Ingress Controllers</span>
+            <span class="pill">CronJobs</span>
+            <span class="pill">Pod Disruption Budgets</span>
+            <span class="pill">Minikube</span>
           </div>
         </div>
 
-        <!-- Skill Card 3: IaC & CI/CD -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="cat-icon">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                <polyline points="2 17 12 22 22 17"></polyline>
-                <polyline points="2 12 12 17 22 12"></polyline>
-              </svg>
-            </div>
-            <h3>Infrastructure as Code &amp; CI/CD</h3>
+        <div class="skill-category">
+          <div class="category-header">
+            <h4>IaC &amp; CI/CD Automation</h4>
           </div>
-          <div class="skill-badges">
-            <span class="skill-badge">Terraform (Modular Dev/Prod)</span>
-            <span class="skill-badge">GitHub Actions</span>
-            <span class="skill-badge">Jenkins</span>
-            <span class="skill-badge">Git &amp; GitHub</span>
-            <span class="skill-badge">Ansible</span>
-            <span class="skill-badge">GitOps</span>
+          <div class="category-tags">
+            <span class="pill">Terraform (Modular Dev/Prod)</span>
+            <span class="pill">GitHub Actions</span>
+            <span class="pill">Jenkins</span>
+            <span class="pill">Git &amp; GitHub</span>
+            <span class="pill">Ansible</span>
+            <span class="pill">GitOps</span>
           </div>
         </div>
 
-        <!-- Skill Card 4: Observability & SRE -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="cat-icon">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-              </svg>
-            </div>
-            <h3>Observability &amp; SRE</h3>
+        <div class="skill-category">
+          <div class="category-header">
+            <h4>Observability &amp; SRE</h4>
           </div>
-          <div class="skill-badges">
-            <span class="skill-badge">Prometheus</span>
-            <span class="skill-badge">Grafana</span>
-            <span class="skill-badge">Alertmanager</span>
-            <span class="skill-badge">Node Exporters</span>
-            <span class="skill-badge">Metric Scraping</span>
-            <span class="skill-badge">High Availability</span>
-            <span class="skill-badge">Fault-Tolerant Automation</span>
+          <div class="category-tags">
+            <span class="pill">Prometheus</span>
+            <span class="pill">Grafana</span>
+            <span class="pill">Alertmanager</span>
+            <span class="pill">Node Exporters</span>
+            <span class="pill">Metric Scraping</span>
+            <span class="pill">High Availability</span>
+            <span class="pill">Fault Tolerance</span>
           </div>
         </div>
 
-        <!-- Skill Card 5: Languages & Backend -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="cat-icon">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
-            <h3>Languages &amp; Backend</h3>
+        <div class="skill-category">
+          <div class="category-header">
+            <h4>Programming &amp; Scripting</h4>
           </div>
-          <div class="skill-badges">
-            <span class="skill-badge">Python</span>
-            <span class="skill-badge">FastAPI</span>
-            <span class="skill-badge">Bash / Shell</span>
-            <span class="skill-badge">SQL / PostgreSQL</span>
-            <span class="skill-badge">SQLAlchemy</span>
-            <span class="skill-badge">REST APIs</span>
-            <span class="skill-badge">Node.js</span>
-            <span class="skill-badge">K8s Python Client</span>
+          <div class="category-tags">
+            <span class="pill">Python</span>
+            <span class="pill">FastAPI</span>
+            <span class="pill">Bash / Shell</span>
+            <span class="pill">SQL / PostgreSQL</span>
+            <span class="pill">SQLAlchemy</span>
+            <span class="pill">REST APIs</span>
+            <span class="pill">Node.js</span>
+            <span class="pill">K8s Python Client</span>
           </div>
         </div>
 
-        <!-- Skill Card 6: Frontend & Systems -->
-        <div class="skill-category-card">
-          <div class="skill-category-header">
-            <div class="cat-icon">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-              </svg>
-            </div>
-            <h3>Frontend &amp; Systems</h3>
+        <div class="skill-category">
+          <div class="category-header">
+            <h4>Frontend &amp; Systems</h4>
           </div>
-          <div class="skill-badges">
-            <span class="skill-badge">React.js</span>
-            <span class="skill-badge">HTML5 &amp; CSS3</span>
-            <span class="skill-badge">JavaScript</span>
-            <span class="skill-badge">Linux (Ubuntu)</span>
-            <span class="skill-badge">Windows Server</span>
-            <span class="skill-badge">Client Web Platforms</span>
+          <div class="category-tags">
+            <span class="pill">React.js</span>
+            <span class="pill">HTML5 &amp; CSS3</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Linux (Ubuntu)</span>
+            <span class="pill">Windows Server</span>
+            <span class="pill">Client Web Delivery</span>
           </div>
         </div>
       </div>
@@ -667,160 +569,136 @@
   </section>
 
   <!-- Education Section -->
-  <section class="section education-section" id="education">
+  <section class="section" id="education">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Academics</span>
-        <h2 class="section-title">Education</h2>
-        <div class="section-line"></div>
+      <div class="section-label">
+        <span class="label-spark">✦</span> Academics
       </div>
+      <h2 class="section-heading">Education</h2>
+      <p class="section-desc">Academic background in computer applications and science.</p>
 
-      <div class="education-grid">
-        <div class="edu-card">
-          <div class="edu-year">2022 – 2024</div>
-          <h3 class="edu-degree">Master of Computer Applications (MCA)</h3>
-          <div class="edu-institution">CDAC Noida</div>
-          <div class="edu-score">Score: <strong>80%</strong></div>
+      <div class="claude-cards-grid">
+        <div class="claude-card edu-card">
+          <span class="edu-time">2022 – 2024</span>
+          <h3>Master of Computer Applications (MCA)</h3>
+          <p class="edu-inst">CDAC Noida</p>
+          <div class="edu-grade">Score: <strong>80%</strong></div>
         </div>
 
-        <div class="edu-card">
-          <div class="edu-year">2019 – 2022</div>
-          <h3 class="edu-degree">Bachelor of Science (B.Sc.)</h3>
-          <div class="edu-institution">Swami Vivekanand Subharti University, Meerut</div>
-          <div class="edu-score">Score: <strong>65%</strong></div>
+        <div class="claude-card edu-card">
+          <span class="edu-time">2019 – 2022</span>
+          <h3>Bachelor of Science (B.Sc.)</h3>
+          <p class="edu-inst">Swami Vivekanand Subharti University, Meerut</p>
+          <div class="edu-grade">Score: <strong>65%</strong></div>
         </div>
 
-        <div class="edu-card">
-          <div class="edu-year">2017 – 2018</div>
-          <h3 class="edu-degree">Class XII (Senior Secondary)</h3>
-          <div class="edu-institution">Army Public School, Kanpur Cantt</div>
-          <div class="edu-score">Score: <strong>84.4%</strong></div>
+        <div class="claude-card edu-card">
+          <span class="edu-time">2017 – 2018</span>
+          <h3>Class XII (Senior Secondary)</h3>
+          <p class="edu-inst">Army Public School, Kanpur Cantt</p>
+          <div class="edu-grade">Score: <strong>84.4%</strong></div>
         </div>
 
-        <div class="edu-card">
-          <div class="edu-year">2015 – 2016</div>
-          <h3 class="edu-degree">Class X (Secondary)</h3>
-          <div class="edu-institution">Army Public School, Kanpur Cantt</div>
-          <div class="edu-score">Score: <strong>91.2%</strong></div>
+        <div class="claude-card edu-card">
+          <span class="edu-time">2015 – 2016</span>
+          <h3>Class X (Secondary)</h3>
+          <p class="edu-inst">Army Public School, Kanpur Cantt</p>
+          <div class="edu-grade">Score: <strong>91.2%</strong></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="section contact-section" id="contact">
+  <!-- Contact Section (Claude Conversation Style) -->
+  <section class="section" id="contact">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Connect</span>
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Whether you have an infrastructure opportunity, need client website engineering, or want to discuss DevOps, let's connect!</p>
-        <div class="section-line"></div>
+      <div class="section-label">
+        <span class="label-spark">✦</span> Conversation
       </div>
+      <h2 class="section-heading">Connect with Ansh</h2>
+      <p class="section-desc">Discuss a cloud engineering opportunity, client website project, or infrastructure consulting.</p>
 
-      <div class="contact-grid">
-        <!-- Contact Info Box -->
-        <div class="contact-info-card">
-          <h3>Contact Details</h3>
-          <p>Feel free to reach out via email, phone, or connect on LinkedIn and GitHub.</p>
+      <div class="contact-claude-layout">
+        <!-- Direct Contacts -->
+        <div class="claude-card contact-details-card">
+          <h3>Direct Channels</h3>
+          <p class="sub-text">Feel free to reach out directly via email, phone, or LinkedIn.</p>
 
-          <div class="contact-methods">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-              </div>
-              <div class="contact-text">
-                <span class="label">Email</span>
-                <span class="value">anshm8888@gmail.com</span>
-              </div>
+          <div class="contact-links-list">
+            <div class="contact-pill-item">
+              <span class="item-label">Email</span>
+              <a href="mailto:anshm8888@gmail.com" class="item-value">anshm8888@gmail.com</a>
               <button class="copy-btn" data-copy="anshm8888@gmail.com" title="Copy email">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
               </button>
             </div>
 
-            <div class="contact-item">
-              <div class="contact-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-              </div>
-              <div class="contact-text">
-                <span class="label">Phone</span>
-                <a href="tel:+918299057337" class="value link">+91 8299057337</a>
-              </div>
-              <button class="copy-btn" data-copy="+918299057337" title="Copy phone number">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <div class="contact-pill-item">
+              <span class="item-label">Phone</span>
+              <a href="tel:+918299057337" class="item-value">+91 8299057337</a>
+              <button class="copy-btn" data-copy="+918299057337" title="Copy phone">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
               </button>
             </div>
 
-            <div class="contact-item">
-              <div class="contact-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-              </div>
-              <div class="contact-text">
-                <span class="label">Location</span>
-                <span class="value">Noida, Uttar Pradesh, India</span>
-              </div>
+            <div class="contact-pill-item">
+              <span class="item-label">Location</span>
+              <span class="item-value">Noida, Uttar Pradesh, India</span>
             </div>
           </div>
 
-          <div class="contact-links-row">
-            <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="social-link-btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <div class="social-btn-row">
+            <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                 <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
               </svg>
-              <span>GitHub</span>
+              GitHub
             </a>
-            <a href="https://linkedin.com/in/ansh-mishra-286986157" target="_blank" rel="noopener noreferrer" class="social-link-btn">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <a href="https://linkedin.com/in/ansh-mishra-286986157" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
               </svg>
-              <span>LinkedIn</span>
+              LinkedIn
             </a>
           </div>
         </div>
 
-        <!-- Interactive Contact Form -->
-        <div class="contact-form-card">
-          <h3>Send a Direct Message</h3>
-          <form id="contactForm" class="contact-form">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" required placeholder="John Doe" class="form-input" />
+        <!-- Claude Prompt-Style Message Form -->
+        <div class="claude-card contact-form-card">
+          <h3>Send a Message</h3>
+          <form id="contactForm" class="claude-form">
+            <div class="form-row">
+              <div class="field-box">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required placeholder="John Doe" class="claude-input" />
+              </div>
+              <div class="field-box">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" required placeholder="john@example.com" class="claude-input" />
+              </div>
             </div>
 
-            <div class="form-group">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" name="email" required placeholder="john@example.com" class="form-input" />
+            <div class="field-box">
+              <label for="subject">Subject / Inquiry</label>
+              <input type="text" id="subject" required placeholder="Client Project / DevOps Opportunity" class="claude-input" />
             </div>
 
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required placeholder="Project Inquiry / Job Opportunity" class="form-input" />
-            </div>
-
-            <div class="form-group">
+            <div class="field-box">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" required placeholder="Tell me about your requirements or opportunity..." class="form-input"></textarea>
+              <textarea id="message" rows="4" required placeholder="Tell me about your project or role requirements..." class="claude-input"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-block">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-              </svg>
+            <button type="submit" class="btn btn-terracotta btn-block">
               Send Message
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+              </svg>
             </button>
           </form>
         </div>
@@ -828,20 +706,19 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer (Claude Style) -->
   <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-left">
-        <span class="footer-brand">Ansh Mishra</span> — DevOps &amp; Site Reliability Engineer
-        <p class="footer-copy">&copy; 2026 Ansh Mishra. Built with precision, performance &amp; clean code.</p>
+    <div class="container footer-container">
+      <div class="footer-brand-line">
+        <svg class="claude-spark" viewBox="0 0 24 24" width="18" height="18" fill="none">
+          <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z" fill="var(--claude-terracotta)" />
+        </svg>
+        <span class="footer-title">Ansh Mishra</span>
+        <span class="footer-sep">·</span>
+        <span class="footer-sub">DevOps &amp; Site Reliability Engineer</span>
       </div>
-      <div class="footer-right">
-        <a href="#hero" class="back-to-top" title="Back to top">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="18 15 12 9 6 15"></polyline>
-          </svg>
-          Back to Top
-        </a>
+      <div class="footer-links">
+        <a href="#hero">Back to Top ↑</a>
       </div>
     </div>
   </footer>

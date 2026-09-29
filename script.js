@@ -1,5 +1,5 @@
 // ==========================================================================
-// Theme Toggle & Persistence
+// Theme Toggle & Persistence (Claude Dark & Warm Paper Light)
 // ==========================================================================
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
@@ -21,7 +21,7 @@ if (themeToggle) {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     body.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
-    showToast(`Switched to ${newTheme} mode`);
+    showToast(`Switched to ${newTheme === 'dark' ? 'Dark' : 'Warm Paper'} mode`);
   });
 }
 
@@ -36,7 +36,6 @@ if (mobileMenuBtn && navMenu) {
     navMenu.classList.toggle('open');
   });
 
-  // Close menu when clicking any nav link
   navMenu.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
       navMenu.classList.remove('open');
@@ -55,7 +54,7 @@ function highlightNavOnScroll() {
 
   sections.forEach(section => {
     const sectionHeight = section.offsetHeight;
-    const sectionTop = section.offsetTop - 120;
+    const sectionTop = section.offsetTop - 100;
     const sectionId = section.getAttribute('id');
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -72,23 +71,97 @@ function highlightNavOnScroll() {
 window.addEventListener('scroll', highlightNavOnScroll);
 
 // ==========================================================================
-// Project Category Filtering
+// Claude Prompt Box & Suggestion Chips
 // ==========================================================================
-const filterButtons = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
+const promptInput = document.getElementById('promptInput');
+const promptSubmit = document.getElementById('promptSubmit');
+const suggestionChips = document.querySelectorAll('.suggestion-chip');
 
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Toggle active state
-    filterButtons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
+function handleNavigationTarget(targetId) {
+  const targetElement = document.getElementById(targetId);
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
+    // Add brief subtle glow highlight
+    targetElement.style.outline = '2px solid var(--claude-terracotta)';
+    targetElement.style.transition = 'outline 0.3s ease';
+    setTimeout(() => {
+      targetElement.style.outline = 'none';
+    }, 2000);
+  }
+}
 
-    const filter = button.getAttribute('data-filter');
+// Chip click listeners
+suggestionChips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    const target = chip.getAttribute('data-target');
+    handleNavigationTarget(target);
+    showToast(`Navigated to ${chip.textContent.trim().replace('✦', '')}`);
+  });
+});
 
-    projectCards.forEach(card => {
+// Prompt input submission
+function processPromptQuery() {
+  if (!promptInput) return;
+  const query = promptInput.value.toLowerCase().trim();
+  if (!query) return;
+
+  if (query.includes('astrotanttra') || query.includes('client') || query.includes('website')) {
+    handleNavigationTarget('project-astrotanttra');
+    showToast('Found: Astrotanttra Client Project');
+  } else if (query.includes('cost') || query.includes('eks') || query.includes('optimizer') || query.includes('aws')) {
+    handleNavigationTarget('project-cost-optimizer');
+    showToast('Found: EKS Cost Optimizer');
+  } else if (query.includes('nutriflow') || query.includes('ci/cd') || query.includes('gitops')) {
+    handleNavigationTarget('project-nutriflow');
+    showToast('Found: NutriFlow AI CI/CD Engine');
+  } else if (query.includes('exp') || query.includes('work') || query.includes('job') || query.includes('role')) {
+    handleNavigationTarget('experience');
+    showToast('Found: Professional Experience');
+  } else if (query.includes('skill') || query.includes('k8s') || query.includes('kubernetes') || query.includes('terraform')) {
+    handleNavigationTarget('skills');
+    showToast('Found: Technical Skills');
+  } else if (query.includes('contact') || query.includes('email') || query.includes('hire') || query.includes('message')) {
+    handleNavigationTarget('contact');
+    showToast('Found: Contact & Message Channels');
+  } else if (query.includes('edu') || query.includes('degree') || query.includes('mca')) {
+    handleNavigationTarget('education');
+    showToast('Found: Education & Degrees');
+  } else {
+    handleNavigationTarget('projects');
+    showToast(`Showing relevant work for: "${query}"`);
+  }
+}
+
+if (promptSubmit) {
+  promptSubmit.addEventListener('click', processPromptQuery);
+}
+
+if (promptInput) {
+  promptInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      processPromptQuery();
+    }
+  });
+}
+
+// ==========================================================================
+// Artifacts Category Filtering
+// ==========================================================================
+const tabButtons = document.querySelectorAll('.tab-btn, .tab-tab-btn');
+const artifactCards = document.querySelectorAll('.artifact-card');
+
+tabButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.getAttribute('data-tab');
+
+    artifactCards.forEach(card => {
       const category = card.getAttribute('data-category');
       if (filter === 'all' || category === filter) {
-        card.style.display = 'flex';
+        card.style.display = 'block';
       } else {
         card.style.display = 'none';
       }
@@ -109,7 +182,6 @@ copyButtons.forEach(button => {
     navigator.clipboard.writeText(textToCopy).then(() => {
       showToast(`Copied to clipboard: ${textToCopy}`);
     }).catch(() => {
-      // Fallback
       const tempInput = document.createElement('input');
       tempInput.value = textToCopy;
       document.body.appendChild(tempInput);
@@ -122,7 +194,7 @@ copyButtons.forEach(button => {
 });
 
 // ==========================================================================
-// Toast Notification
+// Toast Notification (Claude Style)
 // ==========================================================================
 let toastTimeout;
 function showToast(message) {
@@ -135,11 +207,11 @@ function showToast(message) {
   clearTimeout(toastTimeout);
   toastTimeout = setTimeout(() => {
     toast.classList.remove('show');
-  }, 3200);
+  }, 2800);
 }
 
 // ==========================================================================
-// Contact Form Handling (mailto mail client trigger)
+// Contact Form Submission (mailto trigger)
 // ==========================================================================
 const contactForm = document.getElementById('contactForm');
 
