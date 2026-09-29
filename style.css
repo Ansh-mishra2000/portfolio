@@ -1171,54 +1171,6 @@ ul {
 }
 
 /* ==========================================================================
-   Education Section
-   ========================================================================== */
-.edu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-}
-
-.edu-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 24px;
-}
-
-.edu-period {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--accent-copper);
-  font-weight: 600;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.edu-degree {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 4px;
-}
-
-.edu-institution {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  margin-bottom: 12px;
-}
-
-.edu-score-badge {
-  font-size: 0.84rem;
-  color: var(--text-muted);
-}
-
-.edu-score-badge strong {
-  color: var(--text-primary);
-  font-family: var(--font-mono);
-}
-
-/* ==========================================================================
    Contact Section
    ========================================================================== */
 .contact-grid {
