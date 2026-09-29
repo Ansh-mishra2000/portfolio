@@ -57,6 +57,5 @@ Then visit `http://localhost:8000` in your web browser.
 ## 📬 Contact
 
 - **Email:** [anshm8888@gmail.com](mailto:anshm8888@gmail.com)
-- **Phone:** [+91 8299057337](tel:+918299057337)
 - **LinkedIn:** [linkedin.com/in/ansh-mishra-286986157](https://linkedin.com/in/ansh-mishra-286986157)
 - **GitHub:** [github.com/Ansh-mishra2000](https://github.com/Ansh-mishra2000)
