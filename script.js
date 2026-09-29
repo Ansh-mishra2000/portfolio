@@ -106,9 +106,15 @@ function processPromptQuery() {
   const query = promptInput.value.toLowerCase().trim();
   if (!query) return;
 
-  if (query.includes('astrotanttra') || query.includes('client') || query.includes('website')) {
+  if (query.includes('astrotanttra')) {
     handleNavigationTarget('project-astrotanttra');
-    showToast('Found: Astrotanttra Client Project');
+    showToast('Found: Astrotanttra Freelance Client Project');
+  } else if (query.includes('freelance') || query.includes('service') || query.includes('consult')) {
+    handleNavigationTarget('freelance');
+    showToast('Found: Freelance Consulting & Services');
+  } else if (query.includes('client') || query.includes('website')) {
+    handleNavigationTarget('project-astrotanttra');
+    showToast('Found: Astrotanttra Freelance Client Project');
   } else if (query.includes('cost') || query.includes('eks') || query.includes('optimizer') || query.includes('aws')) {
     handleNavigationTarget('project-cost-optimizer');
     showToast('Found: EKS Cost Optimizer');

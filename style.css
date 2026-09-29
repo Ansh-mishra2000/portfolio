@@ -611,6 +611,23 @@ ul {
   line-height: 1.55;
 }
 
+.service-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.mini-pill {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+}
+
 /* ==========================================================================
    Claude Artifacts & Projects
    ========================================================================== */
@@ -663,6 +680,21 @@ ul {
 
 .artifact-card:hover {
   border-color: var(--border-medium);
+}
+
+.artifact-card.freelance-feature {
+  border-color: rgba(218, 119, 86, 0.4);
+  box-shadow: 0 4px 20px var(--claude-terracotta-subtle);
+}
+
+.artifact-role-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--claude-terracotta);
+  background-color: var(--claude-terracotta-subtle);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(218, 119, 86, 0.2);
 }
 
 .artifact-header {
