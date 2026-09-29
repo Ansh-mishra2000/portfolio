@@ -146,35 +146,70 @@ function showToast(message) {
 }
 
 // ==========================================================================
-// Inquiry Form Submission
+// Inquiry Form Submission (Direct Email to anshm8888@gmail.com)
 // ==========================================================================
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const subject = document.getElementById('subject').value.trim();
     const message = document.getElementById('message').value.trim();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
 
     if (!name || !email || !message) {
       showToast('Please fill out all required fields.');
       return;
     }
 
-    const mailtoSubject = encodeURIComponent(`[Project Inquiry] ${subject || 'New Project'}`);
-    const mailtoBody = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nProject Scope & Message:\n${message}`
-    );
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `
+      <svg class="spin-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+        <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
+      </svg>
+      Sending Inquiry...
+    `;
 
-    const mailtoUrl = `mailto:anshm8888@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
-    
-    showToast('Opening your email client to send message...');
-    window.location.href = mailtoUrl;
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/anshm8888@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          _subject: `[Portfolio Inquiry] ${subject || 'New Project'}`,
+          message: message,
+          _captcha: 'false',
+          _template: 'table'
+        })
+      });
 
-    contactForm.reset();
+      const result = await response.json();
+
+      if (response.ok || result.success === 'true') {
+        showToast('✓ Inquiry sent! Message delivered directly to Ansh.');
+        contactForm.reset();
+      } else {
+        throw new Error(result.message || 'Submission failed');
+      }
+    } catch (err) {
+      // Graceful fallback to mailto if network or adblocker blocks request
+      const mailtoSubject = encodeURIComponent(`[Project Inquiry] ${subject || 'New Project'}`);
+      const mailtoBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nProject Scope:\n${message}`);
+      window.location.href = `mailto:anshm8888@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+      showToast('Connecting via email client fallback...');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+    }
   });
 }
 
