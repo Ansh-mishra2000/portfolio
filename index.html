@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ansh Mishra — DevOps Engineer &amp; Freelance Cloud Consultant</title>
-  <meta name="description" content="Portfolio of Ansh Mishra — DevOps Engineer, Site Reliability Engineer (SRE), and Freelance Cloud Consultant specializing in AWS, Kubernetes, Terraform, and custom client web platforms like Astrotanttra." />
-  
-  <!-- Fonts: Newsreader (Claude's signature literary serif), Inter, JetBrains Mono -->
+  <title>Ansh Mishra | DevOps Engineer &amp; Freelance Cloud Architect</title>
+  <meta name="description" content="Portfolio of Ansh Mishra — DevOps Engineer, Site Reliability Engineer (SRE), and Freelance Cloud Architect specializing in AWS, Kubernetes, Terraform, CI/CD, and custom client web platforms like Astrotanttra." />
+  <meta name="author" content="Ansh Mishra" />
+
+  <!-- Google Fonts: Plus Jakarta Sans (Modern Executive Sans), Newsreader (Editorial Serif), JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -17,38 +18,43 @@
   <!-- Toast Notification -->
   <div id="toast" class="toast" role="alert" aria-live="polite"></div>
 
-  <!-- Top Navigation (Claude Style) -->
+  <!-- Header / Navigation -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-brand">
-        <!-- Claude Sunburst / Spark Icon in Terracotta -->
-        <svg class="claude-spark" viewBox="0 0 24 24" width="22" height="22" fill="none">
-          <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z" fill="var(--claude-terracotta)" />
-          <path d="M18.5 15.5L19.5 18.5L22.5 19.5L19.5 20.5L18.5 23.5L17.5 20.5L14.5 19.5L17.5 18.5L18.5 15.5Z" fill="var(--claude-terracotta)" opacity="0.75" />
-          <path d="M5.5 15.5L6.5 18.5L9.5 19.5L6.5 20.5L5.5 23.5L4.5 20.5L1.5 19.5L4.5 18.5L5.5 15.5Z" fill="var(--claude-terracotta)" opacity="0.75" />
-        </svg>
-        <span class="brand-text">Ansh Mishra</span>
+        <div class="brand-monogram">AM</div>
+        <div class="brand-info">
+          <span class="brand-name">Ansh Mishra</span>
+          <span class="brand-tagline">Cloud &amp; DevOps Engineer</span>
+        </div>
       </a>
 
       <nav class="nav-menu" id="navMenu">
-        <a href="#about" class="nav-link">Overview</a>
-        <a href="#freelance" class="nav-link">Freelance Services</a>
-        <a href="#projects" class="nav-link">Artifacts &amp; Work</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#case-study" class="nav-link">Client Work</a>
+        <a href="#projects" class="nav-link">Projects</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <!-- Theme Toggle -->
-        <button id="themeToggle" class="claude-icon-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
+        <!-- Status Indicator Pill -->
+        <div class="nav-status-pill">
+          <span class="pulse-dot"></span>
+          <span class="status-text">Available for Freelance</span>
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme" title="Toggle theme">
           <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
             <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
             <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="23" y2="12"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
@@ -57,7 +63,7 @@
           </svg>
         </button>
 
-        <a href="#contact" class="btn btn-terracotta">Hire for Freelance</a>
+        <a href="#contact" class="btn btn-primary btn-sm">Hire Ansh</a>
 
         <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Toggle navigation">
           <span></span>
@@ -68,413 +74,457 @@
     </div>
   </header>
 
-  <!-- Hero Section (Claude Chat / Greeting Style) -->
+  <!-- Hero Section -->
   <section class="hero-section" id="hero">
+    <div class="ambient-glow"></div>
     <div class="container hero-container">
-      <div class="claude-greeting-card">
-        <div class="greeting-avatar-row">
-          <div class="avatar-frame">
-            <img src="assets/profile.jpg" alt="Ansh Mishra" class="avatar-photo" />
-            <div class="availability-indicator" title="Available for freelance & full-time roles"></div>
-          </div>
-          <div class="greeting-badge">
-            <span class="sparkle">✦</span>
-            <span>DevOps Engineer &amp; Freelance Consultant</span>
-          </div>
+      <div class="hero-text-col">
+        <div class="hero-kicker">
+          <span class="kicker-symbol">◈</span>
+          <span>DevOps, SRE &amp; Freelance Cloud Architect</span>
         </div>
 
-        <h1 class="claude-headline">
-          Hello, I'm <span class="serif-accent">Ansh Mishra</span>.
+        <h1 class="hero-title">
+          Architecting reliable systems, scaling <span class="editorial-accent">cloud platforms</span>, and delivering client web solutions.
         </h1>
-        
-        <p class="claude-subhead">
-          DevOps &amp; Site Reliability Engineer with <strong>2+ years of enterprise IT experience</strong> and an active <strong>freelance consultant</strong>. 
-          I partner with business clients to design and deliver high-performance web platforms (such as <strong>Astrotanttra</strong>), 
-          architect reliable cloud infrastructure on <strong>AWS</strong>, automate <strong>Kubernetes</strong> clusters, and author modular <strong>Terraform (IaC)</strong>.
+
+        <p class="hero-lead">
+          I am <strong>Ansh Mishra</strong> — an engineer with <strong>2+ years of enterprise IT experience</strong> and an independent 
+          freelancer. I help growing businesses and enterprise teams build resilient <strong>AWS infrastructure</strong>, 
+          automate <strong>Kubernetes</strong> workflows, implement modular <strong>Terraform (IaC)</strong>, and launch polished web platforms like <strong>Astrotanttra</strong>.
         </p>
 
-        <!-- Claude Prompt Box / Interactive Query Bar -->
-        <div class="claude-prompt-box">
-          <div class="prompt-input-wrapper">
-            <div class="prompt-icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
+        <div class="hero-actions">
+          <a href="#case-study" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            View Freelance Case Study
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Start a Project
+          </a>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="stat-item">
+            <span class="stat-number">2+</span>
+            <span class="stat-caption">Years Enterprise IT</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">20–35%</span>
+            <span class="stat-caption">Cloud Cost Reduction</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">99.9%</span>
+            <span class="stat-caption">SRE Target Uptime</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-caption">Freelance Client Delivery</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Profile Card -->
+      <div class="hero-visual-col">
+        <div class="profile-card">
+          <div class="profile-frame">
+            <img src="assets/profile.jpg" alt="Ansh Mishra - DevOps & Freelance Engineer" class="profile-photo" />
+            <div class="profile-badge">
+              <span class="pulse-dot"></span>
+              <span>Open for Contracts &amp; Roles</span>
             </div>
-            <input 
-              type="text" 
-              id="promptInput" 
-              class="prompt-input" 
-              placeholder="Ask anything or click a suggestion below..." 
-              autocomplete="off"
-            />
-            <button id="promptSubmit" class="prompt-send-btn" aria-label="Send prompt">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
-              </svg>
-            </button>
           </div>
 
-          <!-- Prompt Suggestions (Claude Style Chips) -->
-          <div class="prompt-suggestions">
-            <button class="suggestion-chip" data-target="project-astrotanttra">
-              <span class="chip-spark">✦</span> Freelance Project: Astrotanttra
-            </button>
-            <button class="suggestion-chip" data-target="freelance">
-              <span class="chip-spark">✦</span> Freelance Services &amp; Consulting
-            </button>
-            <button class="suggestion-chip" data-target="project-cost-optimizer">
-              <span class="chip-spark">✦</span> EKS Cost Optimizer
-            </button>
-            <button class="suggestion-chip" data-target="experience">
-              <span class="chip-spark">✦</span> Enterprise Background
-            </button>
-            <button class="suggestion-chip" data-target="contact">
-              <span class="chip-spark">✦</span> Hire Ansh for a Project
-            </button>
-          </div>
-        </div>
+          <div class="profile-content">
+            <div class="profile-header-info">
+              <h3 class="profile-name">Ansh Mishra</h3>
+              <p class="profile-sub">Noida, India · Remote Worldwide</p>
+            </div>
 
-        <div class="quick-meta-row">
-          <div class="meta-item">
-            <span class="meta-label">Status</span>
-            <span class="meta-val highlight">Open for Freelance &amp; Consulting</span>
-          </div>
-          <div class="meta-divider"></div>
-          <div class="meta-item">
-            <span class="meta-label">Location</span>
-            <span class="meta-val">Noida, India</span>
-          </div>
-          <div class="meta-divider"></div>
-          <div class="meta-item">
-            <span class="meta-label">Email</span>
-            <a href="mailto:anshm8888@gmail.com" class="meta-val link">anshm8888@gmail.com</a>
-          </div>
-          <div class="meta-divider"></div>
-          <div class="meta-item">
-            <span class="meta-label">Phone</span>
-            <a href="tel:+918299057337" class="meta-val link">+91 8299057337</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            <!-- Floating Tech Badges -->
+            <div class="tech-stack-chips">
+              <span class="chip">AWS EKS</span>
+              <span class="chip">Terraform</span>
+              <span class="chip">Kubernetes</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Prometheus</span>
+              <span class="chip">FastAPI</span>
+              <span class="chip">React.js</span>
+            </div>
 
-  <!-- Freelance Consulting & Services Section -->
-  <section class="section" id="freelance">
-    <div class="container">
-      <div class="section-label">
-        <span class="label-spark">✦</span> Freelance Capabilities
-      </div>
-      <h2 class="section-heading">Freelance Consulting &amp; Engineering Services</h2>
-      <p class="section-desc">Helping startups, individual founders, and growing businesses build robust web applications and production-ready cloud architectures.</p>
-
-      <div class="claude-cards-grid">
-        <div class="claude-card">
-          <div class="card-icon-header">
-            <div class="terracotta-badge">Service 01</div>
-            <h3>Custom Client Web Platforms</h3>
-          </div>
-          <p>
-            Full-cycle development of modern, responsive websites and web applications (like <strong>Astrotanttra</strong>). 
-            From UI/UX layout to client lead workflows, booking features, SEO configuration, and secure SSL hosting.
-          </p>
-          <div class="service-pill-row">
-            <span class="mini-pill">React.js</span>
-            <span class="mini-pill">Responsive Design</span>
-            <span class="mini-pill">Lead Capture</span>
-          </div>
-        </div>
-
-        <div class="claude-card">
-          <div class="card-icon-header">
-            <div class="terracotta-badge">Service 02</div>
-            <h3>Cloud &amp; DevOps Setup (AWS)</h3>
-          </div>
-          <p>
-            Architecting secure cloud foundations from scratch. Provisioning isolated VPC networks, EC2 compute, RDS managed databases, 
-            and S3 object storage with modular, maintainable <strong>Terraform (IaC)</strong>.
-          </p>
-          <div class="service-pill-row">
-            <span class="mini-pill">AWS</span>
-            <span class="mini-pill">Terraform</span>
-            <span class="mini-pill">Cloud Security</span>
-          </div>
-        </div>
-
-        <div class="claude-card">
-          <div class="card-icon-header">
-            <div class="terracotta-badge">Service 03</div>
-            <h3>Kubernetes &amp; Containerization</h3>
-          </div>
-          <p>
-            Containerizing client applications with Docker, authoring multi-stage Dockerfiles, and deploying reliable 
-            orchestration on Kubernetes (EKS / K8s) with auto-scaling (HPA) and ingress controllers.
-          </p>
-          <div class="service-pill-row">
-            <span class="mini-pill">Kubernetes</span>
-            <span class="mini-pill">Docker</span>
-            <span class="mini-pill">Helm</span>
-          </div>
-        </div>
-
-        <div class="claude-card">
-          <div class="card-icon-header">
-            <div class="terracotta-badge">Service 04</div>
-            <h3>CI/CD &amp; Observability Stacks</h3>
-          </div>
-          <p>
-            Setting up automated deployment pipelines via GitHub Actions for zero-downtime releases, along with live monitoring 
-            dashboards using Prometheus and Grafana for 99.9% uptime.
-          </p>
-          <div class="service-pill-row">
-            <span class="mini-pill">GitHub Actions</span>
-            <span class="mini-pill">Prometheus</span>
-            <span class="mini-pill">Grafana</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section (Claude Artifact Style) -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="section-label">
-        <span class="label-spark">✦</span> Artifacts &amp; Work
-      </div>
-      <h2 class="section-heading">Featured Projects &amp; Client Deliveries</h2>
-      <p class="section-desc">Independent freelance client deliveries, production cloud architectures, and automated infrastructure systems.</p>
-
-      <!-- Category Filter Tabs (Claude Style) -->
-      <div class="claude-tabs">
-        <button class="tab-btn active" data-tab="all">All Artifacts</button>
-        <button class="tab-btn" data-tab="freelance">Freelance Client Work</button>
-        <button class="tab-btn" data-tab="cloud">Cloud &amp; DevOps</button>
-        <button class="tab-btn" data-tab="microservices">Microservices &amp; GitOps</button>
-      </div>
-
-      <div class="artifacts-container">
-        <!-- Artifact 1: Astrotanttra (Freelance Client Project) -->
-        <div class="artifact-card freelance-feature" id="project-astrotanttra" data-category="freelance">
-          <div class="artifact-header">
-            <div class="artifact-title-box">
-              <span class="artifact-icon">
+            <div class="profile-footer-links">
+              <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="link-btn">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8" fill="none" stroke="currentColor" stroke-width="2"></polyline>
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                 </svg>
-              </span>
-              <span class="artifact-type">Freelance Client Artifact — Production Web Platform</span>
-              <span class="artifact-status-pill featured">★ Freelance Client Delivery</span>
-            </div>
-            <div class="artifact-actions">
-              <span class="artifact-role-tag">Role: Freelance Full-Stack &amp; Cloud Engineer</span>
+                GitHub
+              </a>
+              <a href="https://linkedin.com/in/ansh-mishra-286986157" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                LinkedIn
+              </a>
+              <button class="link-btn copy-btn" data-copy="anshm8888@gmail.com" title="Copy email address">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                Copy Email
+              </button>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <div class="artifact-body">
-            <h3 class="artifact-name">Astrotanttra — Astrology &amp; Spiritual Guidance Platform</h3>
-            <p class="artifact-lead">
-              Designed, built, and delivered as an <strong>independent freelance project</strong> for client <strong>Astrotanttra</strong>. 
-              The client needed an authoritative, modern digital home to showcase their astrology offerings, capture consultation inquiries, 
-              and provide users with an elegant, responsive experience across all screen sizes.
+  <!-- Freelance Services Section -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-tag-row">
+        <span class="section-tag">Capabilities</span>
+      </div>
+      <h2 class="section-title">Freelance Consulting &amp; Engineering</h2>
+      <p class="section-subtitle">Flexible engineering engagements tailored for startups, founders, and technical teams looking for high-quality execution.</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-num">01</div>
+          <h3 class="service-title">Client Web Applications &amp; Platforms</h3>
+          <p class="service-body">
+            Turnkey web engineering from wireframes to cloud release (as delivered for <strong>Astrotanttra</strong>). 
+            Modern, responsive UI/UX, lead capture workflows, SEO setup, and performant architectures.
+          </p>
+          <div class="service-pills">
+            <span>React.js</span>
+            <span>Responsive Web</span>
+            <span>Lead Workflows</span>
+            <span>SEO &amp; SSL</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">02</div>
+          <h3 class="service-title">AWS Cloud Architecture &amp; Terraform (IaC)</h3>
+          <p class="service-body">
+            Design and provisioning of resilient AWS infrastructure. Modular Terraform blueprints for isolated Dev/Prod VPCs, 
+            EKS clusters, RDS PostgreSQL databases, and S3 secure storage.
+          </p>
+          <div class="service-pills">
+            <span>AWS EKS</span>
+            <span>Terraform IaC</span>
+            <span>VPC Networking</span>
+            <span>RDS PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">03</div>
+          <h3 class="service-title">Kubernetes &amp; Containerization</h3>
+          <p class="service-body">
+            Containerizing legacy and greenfield applications with Docker, writing hardened multi-stage Dockerfiles, 
+            and deploying robust Kubernetes manifests with HPA auto-scaling and ingress routing.
+          </p>
+          <div class="service-pills">
+            <span>Kubernetes (K8s)</span>
+            <span>Docker</span>
+            <span>Helm</span>
+            <span>HPA Auto-scaling</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-num">04</div>
+          <h3 class="service-title">CI/CD Pipelines &amp; Observability Stacks</h3>
+          <p class="service-body">
+            Automating testing and deployment cycles with GitHub Actions for zero-downtime releases, paired with real-time 
+            Prometheus and Grafana dashboards to guarantee 99.9% availability.
+          </p>
+          <div class="service-pills">
+            <span>GitHub Actions</span>
+            <span>Prometheus</span>
+            <span>Grafana</span>
+            <span>Alertmanager</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Freelance Client Case Study: Astrotanttra -->
+  <section class="section case-study-section" id="case-study">
+    <div class="container">
+      <div class="case-study-banner">
+        <div class="case-study-header">
+          <div class="case-study-badge">
+            <span class="star-icon">★</span>
+            <span>Featured Freelance Case Study</span>
+          </div>
+          <div class="case-study-role">Role: Freelance Lead Full-Stack &amp; Cloud Engineer</div>
+        </div>
+
+        <div class="case-study-grid">
+          <div class="case-study-left">
+            <h2 class="case-study-title">Astrotanttra — Astrology &amp; Spiritual Consultation Platform</h2>
+            <p class="case-study-summary">
+              Astrotanttra approached me to engineer their full digital presence — transforming their traditional astrology 
+              and guidance consulting services into an intuitive, high-converting digital experience.
             </p>
 
-            <div class="artifact-specs">
-              <div class="spec-block">
-                <h4>Freelance Scope &amp; Deliverables</h4>
-                <ul class="spec-list">
-                  <li><strong>End-to-End Freelance Execution:</strong> Managed entire lifecycle from requirements discovery, UI/UX structure, and component engineering to cloud deployment.</li>
-                  <li><strong>Responsive User Interface:</strong> Built a fluid, modern interface tailored for quick service exploration on mobile phones, tablets, and desktops.</li>
-                  <li><strong>Client Lead Capture &amp; Inquiry Workflows:</strong> Created structured booking forms and inquiry pathways to convert visitors into consultation clients.</li>
-                  <li><strong>SEO, Performance &amp; Cloud Infrastructure:</strong> Implemented speed optimizations, structured metadata, SSL encryption, and high-availability web hosting with 100% uptime.</li>
-                </ul>
+            <div class="case-study-pillars">
+              <div class="pillar-item">
+                <span class="pillar-label">The Challenge</span>
+                <p>The client lacked a digital platform to showcase services, manage client inquiries, and present a reputable modern presence on mobile and desktop.</p>
+              </div>
+
+              <div class="pillar-item">
+                <span class="pillar-label">The Solution</span>
+                <p>Designed and built a responsive web application featuring intuitive service catalogs, rapid inquiry capture, performance-optimized asset delivery, and SSL-secured cloud hosting.</p>
+              </div>
+
+              <div class="pillar-item">
+                <span class="pillar-label">The Impact</span>
+                <p>Delivered on schedule with 100% responsive compatibility, fast load times, and an immediate channel for client consultation bookings.</p>
               </div>
             </div>
 
-            <div class="artifact-tag-strip">
-              <span class="artifact-tag">Freelance Client Work</span>
-              <span class="artifact-tag">Astrotanttra</span>
-              <span class="artifact-tag">React.js / Web</span>
-              <span class="artifact-tag">UI/UX Design</span>
-              <span class="artifact-tag">Responsive</span>
-              <span class="artifact-tag">Cloud Hosting</span>
-              <span class="artifact-tag">SEO &amp; SSL</span>
+            <div class="case-study-tags">
+              <span class="cs-tag">Freelance Delivery</span>
+              <span class="cs-tag">Astrotanttra</span>
+              <span class="cs-tag">React / Web Platform</span>
+              <span class="cs-tag">UI/UX Architecture</span>
+              <span class="cs-tag">Cloud Web Hosting</span>
+              <span class="cs-tag">SEO &amp; Analytics</span>
             </div>
 
-            <div class="artifact-footer">
-              <div class="client-quote">
-                <em>"Custom freelance solution delivered to client specification, facilitating active consultation inquiries."</em>
+            <div class="case-study-cta-row">
+              <a href="#contact" class="btn btn-primary">Hire for Similar Project</a>
+              <span class="verified-text">✓ Client Delivery Completed</span>
+            </div>
+          </div>
+
+          <div class="case-study-right">
+            <div class="case-study-card-panel">
+              <div class="panel-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="panel-title">astrotanttra.com · Project Specs</span>
               </div>
-              <a href="#contact" class="btn btn-sm btn-terracotta">Discuss Your Client Project</a>
+              <div class="panel-body">
+                <div class="spec-row">
+                  <span class="spec-name">Client:</span>
+                  <span class="spec-val">Astrotanttra</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-name">Engagement:</span>
+                  <span class="spec-val">Independent Freelance Contract</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-name">Deliverables:</span>
+                  <span class="spec-val">Full-Stack Web App, UI/UX, Cloud Deploy</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-name">Design System:</span>
+                  <span class="spec-val">Mobile-First, Elegant Spiritual Aesthetics</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-name">Security:</span>
+                  <span class="spec-val">HTTPS / SSL, Form Input Sanitization</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-name">Availability:</span>
+                  <span class="spec-val">99.9%+ Uptime Static Cloud Architecture</span>
+                </div>
+              </div>
+              <div class="panel-quote">
+                <em>"A polished freelance delivery providing direct consultation inquiry access for astrology clients."</em>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Artifact 2: Cloud-Native Kubernetes Cost Optimizer -->
-        <div class="artifact-card" id="project-cost-optimizer" data-category="cloud">
-          <div class="artifact-header">
-            <div class="artifact-title-box">
-              <span class="artifact-icon">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8" fill="none" stroke="currentColor" stroke-width="2"></polyline>
-                </svg>
-              </span>
-              <span class="artifact-type">Technical Artifact — FinOps &amp; Infrastructure</span>
-              <span class="artifact-status-pill">20–35% Savings</span>
+  <!-- Technical Cloud Projects -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-tag-row">
+        <span class="section-tag">Architectures</span>
+      </div>
+      <h2 class="section-title">Technical Projects &amp; Cloud Workflows</h2>
+      <p class="section-subtitle">Real-world infrastructure implementations showcasing automation, cost engineering, and container orchestration.</p>
+
+      <!-- Filter Buttons -->
+      <div class="project-filter-row">
+        <button class="filter-chip active" data-filter="all">All Work</button>
+        <button class="filter-chip" data-filter="freelance">Freelance Client Work</button>
+        <button class="filter-chip" data-filter="cloud">Cloud &amp; FinOps</button>
+        <button class="filter-chip" data-filter="gitops">GitOps &amp; Microservices</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Cloud-Native Kubernetes Cost Optimizer -->
+        <article class="project-card" data-category="cloud">
+          <div class="card-top-bar">
+            <span class="card-badge">FinOps &amp; Infrastructure</span>
+            <span class="card-metric">20–35% Cost Savings</span>
+          </div>
+
+          <div class="card-inner">
+            <h3 class="card-heading">Cloud-Native Kubernetes Cost Optimizer for Amazon EKS</h3>
+            <p class="card-description">
+              Architected isolated dev/prod AWS infrastructure with automated Kubernetes CronJob collectors and a FastAPI analytics engine to query Prometheus metrics and recommend pod right-sizing.
+            </p>
+
+            <div class="card-points">
+              <div class="point-item">
+                <strong>Modular Terraform:</strong> Reusable modules for VPC networks, EKS clusters, RDS PostgreSQL, and ECR registries.
+              </div>
+              <div class="point-item">
+                <strong>Enterprise Security (IRSA):</strong> IAM Roles for Service Accounts and K8s RBAC for fine-grained pod-level access without static secrets.
+              </div>
+              <div class="point-item">
+                <strong>AWS CCM Integration:</strong> Automated node synchronization and dynamic cloud load balancer provisioning via AWS Cloud Controller Manager.
+              </div>
             </div>
-            <div class="artifact-actions">
-              <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="artifact-link">
-                View GitHub
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+
+            <div class="card-tech-chips">
+              <span>AWS EKS</span>
+              <span>Terraform</span>
+              <span>Kubernetes</span>
+              <span>Python (FastAPI)</span>
+              <span>Prometheus</span>
+              <span>Boto3</span>
+              <span>PostgreSQL</span>
+              <span>Docker</span>
+            </div>
+
+            <div class="card-footer">
+              <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="link-arrow">
+                View on GitHub
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
           </div>
+        </article>
 
-          <div class="artifact-body">
-            <h3 class="artifact-name">Cloud-Native Kubernetes Cost Optimizer for Amazon EKS</h3>
-            <p class="artifact-lead">
-              Automated AWS infrastructure with decoupled Prometheus API metric collectors and a FastAPI analytics engine to optimize pod right-sizing and curb cloud expenditure.
+        <!-- Project 2: NutriFlow AI Microservices Platform -->
+        <article class="project-card" data-category="gitops">
+          <div class="card-top-bar">
+            <span class="card-badge">CI/CD &amp; Scaling</span>
+            <span class="card-metric">Zero Downtime</span>
+          </div>
+
+          <div class="card-inner">
+            <h3 class="card-heading">NutriFlow AI: Cloud-Native Microservices &amp; CI/CD Engine</h3>
+            <p class="card-description">
+              Engineered end-to-end containerized microservices featuring automated GitHub Actions CI/CD workflows, multi-stage Docker builds to Amazon ECR, and Horizontal Pod Autoscaling (HPA) on EKS.
             </p>
 
-            <div class="artifact-specs">
-              <div class="spec-block">
-                <h4>Architecture Highlights</h4>
-                <ul class="spec-list">
-                  <li><strong>Modular Terraform (IaC):</strong> Architected isolated dev and prod AWS environments using reusable modules for VPC networking, EKS clusters, RDS PostgreSQL, and ECR.</li>
-                  <li><strong>Security &amp; IRSA:</strong> Configured IAM Roles for Service Accounts (IRSA) and Kubernetes RBAC for fine-grained pod-level access, eliminating static credentials.</li>
-                  <li><strong>AWS CCM Integration:</strong> Integrated AWS Cloud Controller Manager to automate node lifecycle synchronization and cloud load balancer provisioning.</li>
-                  <li><strong>AI-Assisted Cost Optimization:</strong> Built a FastAPI analytics service integrating AWS Pricing APIs and Boto3 to deliver right-sizing recommendations.</li>
-                </ul>
+            <div class="card-points">
+              <div class="point-item">
+                <strong>Automated CI/CD &amp; GitOps:</strong> Automated pytest validation, flake8 linting, multi-stage Docker builds, and zero-downtime rolling deployments.
+              </div>
+              <div class="point-item">
+                <strong>Dynamic Auto-Scaling:</strong> Kubernetes HPA (2–10 replicas) triggered dynamically at 70% CPU and 80% memory thresholds with NGINX Ingress routing.
+              </div>
+              <div class="point-item">
+                <strong>Observability:</strong> Prometheus metric scrapers and Grafana dashboards monitoring API latency and cluster health in real time.
               </div>
             </div>
 
-            <div class="artifact-tag-strip">
-              <span class="artifact-tag">AWS EKS</span>
-              <span class="artifact-tag">Terraform</span>
-              <span class="artifact-tag">Kubernetes</span>
-              <span class="artifact-tag">Python (FastAPI)</span>
-              <span class="artifact-tag">Prometheus</span>
-              <span class="artifact-tag">Boto3</span>
-              <span class="artifact-tag">Docker</span>
-              <span class="artifact-tag">PostgreSQL</span>
+            <div class="card-tech-chips">
+              <span>AWS EKS</span>
+              <span>GitHub Actions</span>
+              <span>Kubernetes HPA</span>
+              <span>Docker</span>
+              <span>Terraform</span>
+              <span>Grafana</span>
+              <span>Google Gemini</span>
             </div>
-          </div>
-        </div>
 
-        <!-- Artifact 3: NutriFlow AI -->
-        <div class="artifact-card" id="project-nutriflow" data-category="microservices">
-          <div class="artifact-header">
-            <div class="artifact-title-box">
-              <span class="artifact-icon">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8" fill="none" stroke="currentColor" stroke-width="2"></polyline>
-                </svg>
-              </span>
-              <span class="artifact-type">Technical Artifact — CI/CD &amp; GitOps</span>
-              <span class="artifact-status-pill">Zero Downtime</span>
-            </div>
-            <div class="artifact-actions">
-              <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="artifact-link">
-                View GitHub
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <div class="card-footer">
+              <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="link-arrow">
+                View on GitHub
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
             </div>
           </div>
-
-          <div class="artifact-body">
-            <h3 class="artifact-name">NutriFlow AI: Microservices Platform &amp; CI/CD Engine</h3>
-            <p class="artifact-lead">
-              Containerized microservices platform with automated GitHub Actions CI/CD workflows, Horizontal Pod Autoscaling (HPA), and real-time observability.
-            </p>
-
-            <div class="artifact-specs">
-              <div class="spec-block">
-                <h4>Pipeline &amp; Scaling Specifications</h4>
-                <ul class="spec-list">
-                  <li><strong>End-to-End CI/CD:</strong> GitHub Actions pipeline automating pytest suites, flake8 linting, multi-stage Docker builds to Amazon ECR, and zero-downtime rolling EKS deployments.</li>
-                  <li><strong>Kubernetes Auto-Scaling:</strong> Horizontal Pod Autoscalers (2–10 replicas) triggered dynamically at 70% CPU and 80% memory thresholds with NGINX Ingress routing.</li>
-                  <li><strong>AI Engine &amp; Monitoring:</strong> Asynchronous FastAPI microservices integrating Google Gemini GenAI with Prometheus metrics scrapers and Grafana dashboards for latency tracking.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="artifact-tag-strip">
-              <span class="artifact-tag">AWS EKS</span>
-              <span class="artifact-tag">GitHub Actions</span>
-              <span class="artifact-tag">Kubernetes (HPA)</span>
-              <span class="artifact-tag">Terraform</span>
-              <span class="artifact-tag">Docker</span>
-              <span class="artifact-tag">Grafana</span>
-              <span class="artifact-tag">Google Gemini</span>
-            </div>
-          </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Professional Experience (strictly anonymized per instruction) -->
-  <section class="section" id="experience">
+  <!-- Professional Experience (Anonymized per instructions) -->
+  <section class="section experience-section" id="experience">
     <div class="container">
-      <div class="section-label">
-        <span class="label-spark">✦</span> Career Background
+      <div class="section-tag-row">
+        <span class="section-tag">Track Record</span>
       </div>
-      <h2 class="section-heading">Enterprise Experience</h2>
-      <p class="section-desc">2+ years delivering enterprise cloud infrastructure, site reliability engineering, and full-stack software solutions.</p>
+      <h2 class="section-title">Enterprise Experience</h2>
+      <p class="section-subtitle">2+ years of enterprise IT, infrastructure engineering, and full-stack software delivery.</p>
 
-      <div class="claude-timeline">
-        <!-- Experience 1 -->
-        <div class="timeline-block">
-          <div class="timeline-meta-col">
-            <span class="time-period">Jun 2024 – Present</span>
-            <span class="role-domain">Enterprise Infrastructure &amp; Cloud</span>
+      <div class="timeline-container">
+        <!-- Experience Item 1 -->
+        <div class="timeline-row">
+          <div class="timeline-left">
+            <span class="timeline-period">Jun 2024 – Present</span>
+            <span class="timeline-domain">Enterprise Infrastructure &amp; Cloud</span>
           </div>
           <div class="timeline-card">
-            <h3 class="role-heading">IT Executive — Cloud &amp; Systems Infrastructure</h3>
-            <ul class="role-bullets">
+            <h3 class="timeline-title">IT Executive — Cloud &amp; Systems Infrastructure</h3>
+            <ul class="timeline-list">
               <li>Provision and manage <strong>AWS EC2, S3, and VPC</strong> network infrastructure; maintain standard configurations using <strong>Terraform</strong> scripts to ensure consistent environments across staging and production.</li>
-              <li>Build and run containerized internal tools using <strong>Docker</strong>, crafting multi-stage Dockerfiles and automating container health checks to streamline deployment cycles.</li>
+              <li>Build and run containerized internal tools using <strong>Docker</strong>, writing optimized Dockerfiles and automating container health checks to streamline deployment across staging instances.</li>
               <li>Assist the infrastructure team in testing <strong>Kubernetes (K8s)</strong> deployment manifests, monitoring pod replica status, and debugging pods via <code>kubectl logs</code> and <code>kubectl describe</code>.</li>
-              <li>Deploy and maintain <strong>Prometheus node exporters and Grafana dashboards</strong> to continuously monitor server health, CPU/memory consumption, and database availability targeting <strong>99.9% uptime</strong>.</li>
-              <li>Develop <strong>Bash and Python automation scripts</strong> for routine automated database backups to AWS S3 and log rotation, cutting manual operational effort by <strong>5+ hours weekly</strong>.</li>
+              <li>Deploy and maintain <strong>Prometheus node exporters and Grafana dashboards</strong> to continuously monitor server health, CPU/memory consumption, and database availability for <strong>99.9% uptime</strong>.</li>
+              <li>Develop <strong>Bash and Python automation scripts</strong> for routine automated database backups to AWS S3 and log rotation, cutting manual operational toil by <strong>5+ hours weekly</strong>.</li>
             </ul>
-            <div class="role-tags">
-              <span>AWS</span>
+            <div class="timeline-chips">
+              <span>AWS EC2/S3/VPC</span>
               <span>Terraform</span>
               <span>Docker</span>
               <span>Kubernetes</span>
-              <span>Prometheus</span>
-              <span>Grafana</span>
-              <span>Bash &amp; Python</span>
+              <span>Prometheus &amp; Grafana</span>
+              <span>Python &amp; Bash</span>
             </div>
           </div>
         </div>
 
-        <!-- Experience 2 -->
-        <div class="timeline-block">
-          <div class="timeline-meta-col">
-            <span class="time-period">Feb 2024 – May 2024</span>
-            <span class="role-domain">Enterprise Software Systems</span>
+        <!-- Experience Item 2 -->
+        <div class="timeline-row">
+          <div class="timeline-left">
+            <span class="timeline-period">Feb 2024 – May 2024</span>
+            <span class="timeline-domain">Enterprise Systems Engineering</span>
           </div>
           <div class="timeline-card">
-            <h3 class="role-heading">Full Stack Development Engineer</h3>
-            <ul class="role-bullets">
+            <h3 class="timeline-title">Full Stack Development Engineer</h3>
+            <ul class="timeline-list">
               <li>Developed responsive UI components using <strong>React.js and Angular</strong> in an enterprise Agile/Scrum environment; managed versioning and team collaboration via <strong>Git / GitHub</strong>.</li>
               <li>Engineered scalable <strong>RESTful backend services</strong> using <strong>Node.js and Python</strong>; designed and indexed SQL schemas for optimized database query performance.</li>
               <li>Participated actively in sprint planning, Git branch workflows, peer code reviews, and automated <strong>CI/CD deployment pipelines</strong>.</li>
             </ul>
-            <div class="role-tags">
+            <div class="timeline-chips">
               <span>React.js</span>
               <span>Node.js</span>
               <span>Python</span>
               <span>REST APIs</span>
               <span>SQL</span>
-              <span>CI/CD</span>
+              <span>Git &amp; CI/CD</span>
             </div>
           </div>
         </div>
@@ -482,107 +532,107 @@
     </div>
   </section>
 
-  <!-- Technical Competencies -->
-  <section class="section" id="skills">
+  <!-- Technical Skills Section -->
+  <section class="section skills-section" id="skills">
     <div class="container">
-      <div class="section-label">
-        <span class="label-spark">✦</span> Technical Matrix
+      <div class="section-tag-row">
+        <span class="section-tag">Arsenal</span>
       </div>
-      <h2 class="section-heading">Skills &amp; Capabilities</h2>
-      <p class="section-desc">Tools and frameworks applied across cloud engineering, reliability, freelance deliveries, and software architecture.</p>
+      <h2 class="section-title">Technical Skills &amp; Stack</h2>
+      <p class="section-subtitle">Core technologies and frameworks applied across cloud engineering, reliability, and client delivery.</p>
 
-      <div class="skills-claude-matrix">
-        <div class="skill-category">
-          <div class="category-header">
+      <div class="skills-grid">
+        <div class="skill-box">
+          <div class="skill-box-header">
             <h4>Cloud Computing (AWS)</h4>
           </div>
-          <div class="category-tags">
-            <span class="pill">Amazon EKS</span>
-            <span class="pill">AWS EC2</span>
-            <span class="pill">AWS VPC</span>
-            <span class="pill">RDS (PostgreSQL)</span>
-            <span class="pill">Amazon S3</span>
-            <span class="pill">AWS IAM &amp; IRSA</span>
-            <span class="pill">Amazon ECR</span>
-            <span class="pill">DynamoDB</span>
-            <span class="pill">Boto3</span>
-            <span class="pill">AWS CCM</span>
+          <div class="skill-pills">
+            <span>Amazon EKS</span>
+            <span>AWS EC2</span>
+            <span>AWS VPC</span>
+            <span>RDS (PostgreSQL)</span>
+            <span>Amazon S3</span>
+            <span>AWS IAM &amp; IRSA</span>
+            <span>Amazon ECR</span>
+            <span>DynamoDB</span>
+            <span>Boto3</span>
+            <span>AWS CCM</span>
           </div>
         </div>
 
-        <div class="skill-category">
-          <div class="category-header">
+        <div class="skill-box">
+          <div class="skill-box-header">
             <h4>Containers &amp; Orchestration</h4>
           </div>
-          <div class="category-tags">
-            <span class="pill">Kubernetes (K8s)</span>
-            <span class="pill">Docker</span>
-            <span class="pill">Helm</span>
-            <span class="pill">Kubernetes RBAC</span>
-            <span class="pill">HPA Autoscaling</span>
-            <span class="pill">Ingress Controllers</span>
-            <span class="pill">CronJobs</span>
-            <span class="pill">Pod Disruption Budgets</span>
-            <span class="pill">Minikube</span>
+          <div class="skill-pills">
+            <span>Kubernetes (K8s)</span>
+            <span>Docker</span>
+            <span>Helm</span>
+            <span>Kubernetes RBAC</span>
+            <span>HPA Auto-scaling</span>
+            <span>Ingress Controllers</span>
+            <span>CronJobs</span>
+            <span>Pod Disruption Budgets</span>
+            <span>Minikube</span>
           </div>
         </div>
 
-        <div class="skill-category">
-          <div class="category-header">
-            <h4>IaC &amp; CI/CD Automation</h4>
+        <div class="skill-box">
+          <div class="skill-box-header">
+            <h4>Infrastructure as Code &amp; CI/CD</h4>
           </div>
-          <div class="category-tags">
-            <span class="pill">Terraform (Modular Dev/Prod)</span>
-            <span class="pill">GitHub Actions</span>
-            <span class="pill">Jenkins</span>
-            <span class="pill">Git &amp; GitHub</span>
-            <span class="pill">Ansible</span>
-            <span class="pill">GitOps</span>
+          <div class="skill-pills">
+            <span>Terraform (Modular Dev/Prod)</span>
+            <span>GitHub Actions</span>
+            <span>Jenkins</span>
+            <span>Git &amp; GitHub</span>
+            <span>Ansible</span>
+            <span>GitOps Workflows</span>
           </div>
         </div>
 
-        <div class="skill-category">
-          <div class="category-header">
+        <div class="skill-box">
+          <div class="skill-box-header">
             <h4>Observability &amp; SRE</h4>
           </div>
-          <div class="category-tags">
-            <span class="pill">Prometheus</span>
-            <span class="pill">Grafana</span>
-            <span class="pill">Alertmanager</span>
-            <span class="pill">Node Exporters</span>
-            <span class="pill">Metric Scraping</span>
-            <span class="pill">High Availability</span>
-            <span class="pill">Fault Tolerance</span>
+          <div class="skill-pills">
+            <span>Prometheus</span>
+            <span>Grafana</span>
+            <span>Alertmanager</span>
+            <span>Node Exporters</span>
+            <span>Metric Scraping</span>
+            <span>High Availability</span>
+            <span>Fault Tolerance</span>
           </div>
         </div>
 
-        <div class="skill-category">
-          <div class="category-header">
-            <h4>Programming &amp; Scripting</h4>
+        <div class="skill-box">
+          <div class="skill-box-header">
+            <h4>Backend &amp; Scripting</h4>
           </div>
-          <div class="category-tags">
-            <span class="pill">Python</span>
-            <span class="pill">FastAPI</span>
-            <span class="pill">Bash / Shell</span>
-            <span class="pill">SQL / PostgreSQL</span>
-            <span class="pill">SQLAlchemy</span>
-            <span class="pill">REST APIs</span>
-            <span class="pill">Node.js</span>
-            <span class="pill">K8s Python Client</span>
+          <div class="skill-pills">
+            <span>Python</span>
+            <span>FastAPI</span>
+            <span>Bash / Shell</span>
+            <span>SQL / PostgreSQL</span>
+            <span>SQLAlchemy</span>
+            <span>REST APIs</span>
+            <span>Node.js</span>
+            <span>K8s Python Client</span>
           </div>
         </div>
 
-        <div class="skill-category">
-          <div class="category-header">
+        <div class="skill-box">
+          <div class="skill-box-header">
             <h4>Frontend &amp; Client Solutions</h4>
           </div>
-          <div class="category-tags">
-            <span class="pill">React.js</span>
-            <span class="pill">HTML5 &amp; CSS3</span>
-            <span class="pill">JavaScript</span>
-            <span class="pill">Linux (Ubuntu)</span>
-            <span class="pill">Freelance Client Web Delivery</span>
-            <span class="pill">SEO &amp; Performance</span>
+          <div class="skill-pills">
+            <span>React.js</span>
+            <span>HTML5 &amp; CSS3</span>
+            <span>Modern JavaScript</span>
+            <span>Linux (Ubuntu)</span>
+            <span>Freelance Web Delivery</span>
+            <span>SEO &amp; Performance</span>
           </div>
         </div>
       </div>
@@ -590,133 +640,139 @@
   </section>
 
   <!-- Education Section -->
-  <section class="section" id="education">
+  <section class="section education-section" id="education">
     <div class="container">
-      <div class="section-label">
-        <span class="label-spark">✦</span> Academics
+      <div class="section-tag-row">
+        <span class="section-tag">Education</span>
       </div>
-      <h2 class="section-heading">Education</h2>
-      <p class="section-desc">Academic background in computer applications and science.</p>
+      <h2 class="section-title">Academic Background</h2>
+      <p class="section-subtitle">Formal education in computer applications and science.</p>
 
-      <div class="claude-cards-grid">
-        <div class="claude-card edu-card">
-          <span class="edu-time">2022 – 2024</span>
-          <h3>Master of Computer Applications (MCA)</h3>
-          <p class="edu-inst">CDAC Noida</p>
-          <div class="edu-grade">Score: <strong>80%</strong></div>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <span class="edu-period">2022 – 2024</span>
+          <h3 class="edu-degree">Master of Computer Applications (MCA)</h3>
+          <p class="edu-institution">CDAC Noida</p>
+          <div class="edu-score-badge">Score: <strong>80%</strong></div>
         </div>
 
-        <div class="claude-card edu-card">
-          <span class="edu-time">2019 – 2022</span>
-          <h3>Bachelor of Science (B.Sc.)</h3>
-          <p class="edu-inst">Swami Vivekanand Subharti University, Meerut</p>
-          <div class="edu-grade">Score: <strong>65%</strong></div>
+        <div class="edu-card">
+          <span class="edu-period">2019 – 2022</span>
+          <h3 class="edu-degree">Bachelor of Science (B.Sc.)</h3>
+          <p class="edu-institution">Swami Vivekanand Subharti University, Meerut</p>
+          <div class="edu-score-badge">Score: <strong>65%</strong></div>
         </div>
 
-        <div class="claude-card edu-card">
-          <span class="edu-time">2017 – 2018</span>
-          <h3>Class XII (Senior Secondary)</h3>
-          <p class="edu-inst">Army Public School, Kanpur Cantt</p>
-          <div class="edu-grade">Score: <strong>84.4%</strong></div>
+        <div class="edu-card">
+          <span class="edu-period">2017 – 2018</span>
+          <h3 class="edu-degree">Class XII (Senior Secondary)</h3>
+          <p class="edu-institution">Army Public School, Kanpur Cantt</p>
+          <div class="edu-score-badge">Score: <strong>84.4%</strong></div>
         </div>
 
-        <div class="claude-card edu-card">
-          <span class="edu-time">2015 – 2016</span>
-          <h3>Class X (Secondary)</h3>
-          <p class="edu-inst">Army Public School, Kanpur Cantt</p>
-          <div class="edu-grade">Score: <strong>91.2%</strong></div>
+        <div class="edu-card">
+          <span class="edu-period">2015 – 2016</span>
+          <h3 class="edu-degree">Class X (Secondary)</h3>
+          <p class="edu-institution">Army Public School, Kanpur Cantt</p>
+          <div class="edu-score-badge">Score: <strong>91.2%</strong></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact / Hire Freelance Section -->
-  <section class="section" id="contact">
+  <!-- Contact & Hire Freelancer Section -->
+  <section class="section contact-section" id="contact">
     <div class="container">
-      <div class="section-label">
-        <span class="label-spark">✦</span> Hire &amp; Connect
+      <div class="section-tag-row">
+        <span class="section-tag">Inquiry</span>
       </div>
-      <h2 class="section-heading">Start a Freelance Project or Say Hello</h2>
-      <p class="section-desc">Available for freelance web &amp; cloud engagements, technical consulting, and high-impact engineering roles.</p>
+      <h2 class="section-title">Start a Project or Hire Ansh</h2>
+      <p class="section-subtitle">Whether you need an independent freelance web platform, cloud architecture consulting, or are discussing a full-time role, let's talk.</p>
 
-      <div class="contact-claude-layout">
-        <!-- Direct Contacts -->
-        <div class="claude-card contact-details-card">
-          <h3>Direct Channels</h3>
-          <p class="sub-text">Ready to discuss your project scope, architecture, or contract timeline.</p>
+      <div class="contact-grid">
+        <!-- Direct Channels Card -->
+        <div class="contact-card direct-channels">
+          <h3 class="contact-card-title">Direct Channels</h3>
+          <p class="contact-card-desc">Reach out directly through any of these communication lines.</p>
 
-          <div class="contact-links-list">
-            <div class="contact-pill-item">
-              <span class="item-label">Email</span>
-              <a href="mailto:anshm8888@gmail.com" class="item-value">anshm8888@gmail.com</a>
-              <button class="copy-btn" data-copy="anshm8888@gmail.com" title="Copy email">
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="channels-list">
+            <div class="channel-item">
+              <div class="channel-info">
+                <span class="channel-label">Email</span>
+                <a href="mailto:anshm8888@gmail.com" class="channel-val">anshm8888@gmail.com</a>
+              </div>
+              <button class="copy-icon-btn copy-btn" data-copy="anshm8888@gmail.com" title="Copy email">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
               </button>
             </div>
 
-            <div class="contact-pill-item">
-              <span class="item-label">Phone / WhatsApp</span>
-              <a href="tel:+918299057337" class="item-value">+91 8299057337</a>
-              <button class="copy-btn" data-copy="+918299057337" title="Copy phone">
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <div class="channel-item">
+              <div class="channel-info">
+                <span class="channel-label">Phone &amp; WhatsApp</span>
+                <a href="tel:+918299057337" class="channel-val">+91 8299057337</a>
+              </div>
+              <button class="copy-icon-btn copy-btn" data-copy="+918299057337" title="Copy phone">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                   <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                 </svg>
               </button>
             </div>
 
-            <div class="contact-pill-item">
-              <span class="item-label">Location</span>
-              <span class="item-value">Noida, Uttar Pradesh, India (Remote worldwide)</span>
+            <div class="channel-item">
+              <div class="channel-info">
+                <span class="channel-label">Location</span>
+                <span class="channel-val">Noida, Uttar Pradesh, India</span>
+              </div>
             </div>
           </div>
 
-          <div class="social-btn-row">
-            <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <div class="social-links-grid">
+            <a href="https://github.com/Ansh-mishra2000" target="_blank" rel="noopener noreferrer" class="social-btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
                 <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
               </svg>
-              GitHub
+              <span>GitHub</span>
             </a>
-            <a href="https://linkedin.com/in/ansh-mishra-286986157" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <a href="https://linkedin.com/in/ansh-mishra-286986157" target="_blank" rel="noopener noreferrer" class="social-btn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
               </svg>
-              LinkedIn
+              <span>LinkedIn</span>
             </a>
           </div>
         </div>
 
-        <!-- Claude Prompt-Style Message Form -->
-        <div class="claude-card contact-form-card">
-          <h3>Send a Freelance or Project Inquiry</h3>
-          <form id="contactForm" class="claude-form">
+        <!-- Inquiry Form Card -->
+        <div class="contact-card inquiry-form-card">
+          <h3 class="contact-card-title">Send a Project Inquiry</h3>
+          <form id="contactForm" class="inquiry-form">
             <div class="form-row">
-              <div class="field-box">
+              <div class="form-field">
                 <label for="name">Your Name / Organization</label>
-                <input type="text" id="name" required placeholder="John Doe" class="claude-input" />
+                <input type="text" id="name" required placeholder="John Doe" class="custom-input" />
               </div>
-              <div class="field-box">
+              <div class="form-field">
                 <label for="email">Your Email</label>
-                <input type="email" id="email" required placeholder="john@example.com" class="claude-input" />
+                <input type="email" id="email" required placeholder="john@example.com" class="custom-input" />
               </div>
             </div>
 
-            <div class="field-box">
-              <label for="subject">Project Type / Inquiry</label>
-              <input type="text" id="subject" required placeholder="Freelance Website Development / Cloud Consulting" class="claude-input" />
+            <div class="form-field">
+              <label for="subject">Project Type / Opportunity</label>
+              <input type="text" id="subject" required placeholder="e.g. Freelance Web Development / AWS Architecture" class="custom-input" />
             </div>
 
-            <div class="field-box">
-              <label for="message">Project Requirements / Timeline</label>
-              <textarea id="message" rows="4" required placeholder="Tell me about your website or infrastructure requirements, expected deliverables, and timeline..." class="claude-input"></textarea>
+            <div class="form-field">
+              <label for="message">Project Scope &amp; Timeline</label>
+              <textarea id="message" rows="4" required placeholder="Tell me about your requirements, deliverables, and timeline..." class="custom-input"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-terracotta btn-block">
-              Submit Freelance Inquiry
+            <button type="submit" class="btn btn-primary btn-block">
+              Send Inquiry
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
               </svg>
@@ -727,19 +783,16 @@
     </div>
   </section>
 
-  <!-- Footer (Claude Style) -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-container">
-      <div class="footer-brand-line">
-        <svg class="claude-spark" viewBox="0 0 24 24" width="18" height="18" fill="none">
-          <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z" fill="var(--claude-terracotta)" />
-        </svg>
-        <span class="footer-title">Ansh Mishra</span>
+      <div class="footer-left">
+        <span class="footer-brand">Ansh Mishra</span>
         <span class="footer-sep">·</span>
-        <span class="footer-sub">DevOps Engineer &amp; Freelance Cloud Consultant</span>
+        <span class="footer-role">DevOps Engineer &amp; Freelance Cloud Architect</span>
       </div>
-      <div class="footer-links">
-        <a href="#hero">Back to Top ↑</a>
+      <div class="footer-right">
+        <a href="#hero" class="back-link">Back to top ↑</a>
       </div>
     </div>
   </footer>

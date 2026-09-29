@@ -1,5 +1,5 @@
 // ==========================================================================
-// Theme Toggle & Persistence (Claude Dark & Warm Paper Light)
+// Theme Toggle & Persistence
 // ==========================================================================
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
@@ -21,7 +21,7 @@ if (themeToggle) {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     body.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
-    showToast(`Switched to ${newTheme === 'dark' ? 'Dark' : 'Warm Paper'} mode`);
+    showToast(`Switched to ${newTheme === 'dark' ? 'Dark' : 'Light'} theme`);
   });
 }
 
@@ -54,7 +54,7 @@ function highlightNavOnScroll() {
 
   sections.forEach(section => {
     const sectionHeight = section.offsetHeight;
-    const sectionTop = section.offsetTop - 100;
+    const sectionTop = section.offsetTop - 110;
     const sectionId = section.getAttribute('id');
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -71,107 +71,36 @@ function highlightNavOnScroll() {
 window.addEventListener('scroll', highlightNavOnScroll);
 
 // ==========================================================================
-// Claude Prompt Box & Suggestion Chips
+// Project Category Filtering
 // ==========================================================================
-const promptInput = document.getElementById('promptInput');
-const promptSubmit = document.getElementById('promptSubmit');
-const suggestionChips = document.querySelectorAll('.suggestion-chip');
+const filterChips = document.querySelectorAll('.filter-chip');
+const projectCards = document.querySelectorAll('.project-card');
+const caseStudySection = document.getElementById('case-study');
 
-function handleNavigationTarget(targetId) {
-  const targetElement = document.getElementById(targetId);
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    
-    // Add brief subtle glow highlight
-    targetElement.style.outline = '2px solid var(--claude-terracotta)';
-    targetElement.style.transition = 'outline 0.3s ease';
-    setTimeout(() => {
-      targetElement.style.outline = 'none';
-    }, 2000);
-  }
-}
-
-// Chip click listeners
-suggestionChips.forEach(chip => {
+filterChips.forEach(chip => {
   chip.addEventListener('click', () => {
-    const target = chip.getAttribute('data-target');
-    handleNavigationTarget(target);
-    showToast(`Navigated to ${chip.textContent.trim().replace('✦', '')}`);
-  });
-});
+    filterChips.forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
 
-// Prompt input submission
-function processPromptQuery() {
-  if (!promptInput) return;
-  const query = promptInput.value.toLowerCase().trim();
-  if (!query) return;
+    const filter = chip.getAttribute('data-filter');
 
-  if (query.includes('astrotanttra')) {
-    handleNavigationTarget('project-astrotanttra');
-    showToast('Found: Astrotanttra Freelance Client Project');
-  } else if (query.includes('freelance') || query.includes('service') || query.includes('consult')) {
-    handleNavigationTarget('freelance');
-    showToast('Found: Freelance Consulting & Services');
-  } else if (query.includes('client') || query.includes('website')) {
-    handleNavigationTarget('project-astrotanttra');
-    showToast('Found: Astrotanttra Freelance Client Project');
-  } else if (query.includes('cost') || query.includes('eks') || query.includes('optimizer') || query.includes('aws')) {
-    handleNavigationTarget('project-cost-optimizer');
-    showToast('Found: EKS Cost Optimizer');
-  } else if (query.includes('nutriflow') || query.includes('ci/cd') || query.includes('gitops')) {
-    handleNavigationTarget('project-nutriflow');
-    showToast('Found: NutriFlow AI CI/CD Engine');
-  } else if (query.includes('exp') || query.includes('work') || query.includes('job') || query.includes('role')) {
-    handleNavigationTarget('experience');
-    showToast('Found: Professional Experience');
-  } else if (query.includes('skill') || query.includes('k8s') || query.includes('kubernetes') || query.includes('terraform')) {
-    handleNavigationTarget('skills');
-    showToast('Found: Technical Skills');
-  } else if (query.includes('contact') || query.includes('email') || query.includes('hire') || query.includes('message')) {
-    handleNavigationTarget('contact');
-    showToast('Found: Contact & Message Channels');
-  } else if (query.includes('edu') || query.includes('degree') || query.includes('mca')) {
-    handleNavigationTarget('education');
-    showToast('Found: Education & Degrees');
-  } else {
-    handleNavigationTarget('projects');
-    showToast(`Showing relevant work for: "${query}"`);
-  }
-}
-
-if (promptSubmit) {
-  promptSubmit.addEventListener('click', processPromptQuery);
-}
-
-if (promptInput) {
-  promptInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      processPromptQuery();
-    }
-  });
-}
-
-// ==========================================================================
-// Artifacts Category Filtering
-// ==========================================================================
-const tabButtons = document.querySelectorAll('.tab-btn, .tab-tab-btn');
-const artifactCards = document.querySelectorAll('.artifact-card');
-
-tabButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    tabButtons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    const filter = btn.getAttribute('data-tab');
-
-    artifactCards.forEach(card => {
-      const category = card.getAttribute('data-category');
-      if (filter === 'all' || category === filter) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
+    if (filter === 'freelance') {
+      // Smoothly scroll to the case study
+      if (caseStudySection) {
+        caseStudySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        showToast('Viewing Featured Freelance Case Study');
       }
-    });
+      projectCards.forEach(card => card.style.display = 'flex');
+    } else {
+      projectCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
   });
 });
 
@@ -200,7 +129,7 @@ copyButtons.forEach(button => {
 });
 
 // ==========================================================================
-// Toast Notification (Claude Style)
+// Toast Notification
 // ==========================================================================
 let toastTimeout;
 function showToast(message) {
@@ -217,7 +146,7 @@ function showToast(message) {
 }
 
 // ==========================================================================
-// Contact Form Submission (mailto trigger)
+// Inquiry Form Submission
 // ==========================================================================
 const contactForm = document.getElementById('contactForm');
 
@@ -235,14 +164,14 @@ if (contactForm) {
       return;
     }
 
-    const mailtoSubject = encodeURIComponent(`[Portfolio Inquiry] ${subject || 'New Message'}`);
+    const mailtoSubject = encodeURIComponent(`[Project Inquiry] ${subject || 'New Project'}`);
     const mailtoBody = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+      `Name: ${name}\nEmail: ${email}\n\nProject Scope & Message:\n${message}`
     );
 
     const mailtoUrl = `mailto:anshm8888@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
     
-    showToast('Opening email client...');
+    showToast('Opening your email client to send message...');
     window.location.href = mailtoUrl;
 
     contactForm.reset();
